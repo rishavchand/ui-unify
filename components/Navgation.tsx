@@ -31,7 +31,8 @@ export function Navigation() {
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center space-x-2">
             <ChartNoAxesGantt />
-            <span className="font-bold text-xl text-red-400">UÍ
+            <span className="font-bold text-xl text-red-400">
+              UÍ
               <span className="text-gray-800 dark:text-[#E7E9EC]">-Unify</span>
             </span>
           </Link>
