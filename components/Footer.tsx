@@ -10,7 +10,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({
   year = new Date().getFullYear(),
-  email = 'support@flowpay.com',
+  email = 'support@uiunify.com',
 }) => {
   return (
     <footer className=" dark:text-gray-300 py-8  mt-10">
