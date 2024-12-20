@@ -177,6 +177,9 @@ export function Hero() {
           </TextRevealCard>
         </div>
       </div>
+      <div>
+        
+      </div>
     </div>
   );
 }
