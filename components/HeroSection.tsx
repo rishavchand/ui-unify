@@ -1,11 +1,14 @@
+import { Spotlight } from "./ui/spotlight";
 
 
 export function Hero() {
   return (
-    <div>
-      <div className="flex justify-center items-center mt-16">
-      
-      </div>
+    <div className="overflow-hidden ">
+       <div className="flex justify-center   mt-20 overflow-hidden  ">
+       <Spotlight
+       className="  hidden sm:block"
+       />
+       </div>
       <div className="flex justify-center items-center h-full mt-8">
         <div className="flex flex-col items-center">
           <h1 className="text-6xl font-bold bg-gradient-to-r from-orange-400 to-orange-700 text-transparent bg-clip-text">
