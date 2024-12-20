@@ -3,6 +3,7 @@ import { Github, GithubIcon, Sparkles, Wand2 } from 'lucide-react';
 import { HoverBorderGradient } from './ui/hover-border-gradient';
 import { Spotlight } from './ui/spotlight';
 import { motion } from 'framer-motion';
+
 import {
   TextRevealCard,
   TextRevealCardDescription,
@@ -10,6 +11,7 @@ import {
 } from './ui/text-reveal-card';
 
 import { MarqueeDemo } from './Marque';
+import { AnimatedShinyTextDemo } from './ui/AnimatedShinyText';
 
 export function Hero() {
   return (
@@ -79,6 +81,7 @@ export function Hero() {
               containerClassName="rounded-full"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-3"
               as="button"
+              onClick={() => (window.location.href = 'https://github.com')}
             >
               <span className="flex gap-2 text-base font-medium">
                 Star on GitHub <GithubIcon className="w-5 h-5" />
@@ -89,6 +92,7 @@ export function Hero() {
               containerClassName="rounded-full"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-3"
               as="button"
+              onClick={() => (window.location.href = '/components')}
             >
               <span className="flex gap-2 text-base font-medium">
                 Components <Wand2 className="w-5 h-5" />
@@ -116,42 +120,52 @@ export function Hero() {
         </div>
       </motion.div>
 
-      <div>
-        <div>
-          <h1>Showcase</h1>
-        </div>
+      <div className="flex justify-center mt-12">
+        {/* <div>
+          <h1 className="flex justify-center align-middle  text-4xl sm:text-6xl text-gray-600 dark:text-gray-400 font-bold ">
+            Showcase
+          </h1>
+          <p className="flex justify-center text-xl font-medium dark:text-gray-400 text-gray-600 mt-4 px-4">
+            Explore examples to see how these components can be integrated into
+            your projects.
+          </p>
+        </div> */}
       </div>
       <div className="flex justify-center align-middle mt-12">
-        <div className="">
-          <h1 className="flex justify-center text-6xl font-bold text-gray-600 dark:text-gray-400">
-            Components Demo
-          </h1>
-          <p className="flex justify-center text-xl font-medium dark:text-gray-400  text-gray-600 mt-4">
-            Here are some of the components that you can use to build your
-            landing pages.
-          </p>
-
-          <div className="mt-10 mb-4 ">
-            <div className='flex flex-col gap-4'>
-            <div >
-            <MarqueeDemo/>
-            </div>
-              <div className="flex items-center justify-center  rounded-2xl px-10">
-                <TextRevealCard
-                  text="You know the business"
-                  revealText="I know the chemistry "
-                >
-                  <TextRevealCardTitle>
-                    Sometimes, you just need to see it.
-                  </TextRevealCardTitle>
-                  <TextRevealCardDescription>
-                    This is a text reveal card. Hover over the card to reveal
-                    the hidden text.
-                  </TextRevealCardDescription>
-                </TextRevealCard>
-              </div>
+        <div className="mt-10 mb-4 ">
+          <div>
+            <div>
+              <h1 className="flex justify-center text-4xl sm:text-6xl font-bold text-gray-600 dark:text-gray-400">
+                Components Demo
+              </h1>
+              <p className="flex justify-center text-lg font-medium  dark:text-gray-400  text-gray-600 mt-4 px-4 ">
+                Here are some of the components that you can use to build your
+                landing pages.
+              </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-4">
+        <div>
+          <MarqueeDemo />
+        </div>
+        <div>
+          <AnimatedShinyTextDemo/>
+        </div>
+        <div className="flex items-center justify-center  rounded-2xl px-10">
+          <TextRevealCard
+            text="You know the business"
+            revealText="I know the chemistry "
+          >
+            <TextRevealCardTitle>
+              Sometimes, you just need to see it.
+            </TextRevealCardTitle>
+            <TextRevealCardDescription>
+              This is a text reveal card. Hover over the card to reveal the
+              hidden text.
+            </TextRevealCardDescription>
+          </TextRevealCard>
         </div>
       </div>
     </div>
