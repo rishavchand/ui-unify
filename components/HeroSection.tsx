@@ -12,6 +12,7 @@ import {
 
 import { MarqueeDemo } from './Marque';
 import { AnimatedShinyTextDemo } from './ui/AnimatedShinyText';
+import { FlipWords } from './ui/flip-words';
 
 export function Hero() {
   return (
@@ -152,6 +153,14 @@ export function Hero() {
         </div>
         <div>
           <AnimatedShinyTextDemo/>
+        </div>
+        <div className='flex justify-center my-10'>
+          <FlipWords 
+            words={['UÍ-Unify is based on ', 'Nextjs', 'TailwindCSS', 'Acernity', 'Magic UI', 'Shadcn/ui']}
+            duration={2000}
+            className="text-3xl font-bold text-gray-600 dark:text-gray-400"
+
+          />
         </div>
         <div className="flex items-center justify-center  rounded-2xl px-10">
           <TextRevealCard
