@@ -3,6 +3,13 @@ import { Github, GithubIcon, Sparkles, Wand2 } from 'lucide-react';
 import { HoverBorderGradient } from './ui/hover-border-gradient';
 import { Spotlight } from './ui/spotlight';
 import { motion } from 'framer-motion';
+import {
+  TextRevealCard,
+  TextRevealCardDescription,
+  TextRevealCardTitle,
+} from './ui/text-reveal-card';
+
+import { MarqueeDemo } from './Marque';
 
 export function Hero() {
   return (
@@ -108,6 +115,45 @@ export function Hero() {
           </motion.div>
         </div>
       </motion.div>
+
+      <div>
+        <div>
+          <h1>Showcase</h1>
+        </div>
+      </div>
+      <div className="flex justify-center align-middle mt-12">
+        <div className="">
+          <h1 className="flex justify-center text-6xl font-bold text-gray-600 dark:text-gray-400">
+            Components Demo
+          </h1>
+          <p className="flex justify-center text-xl font-medium dark:text-gray-400  text-gray-600 mt-4">
+            Here are some of the components that you can use to build your
+            landing pages.
+          </p>
+
+          <div className="mt-10 mb-4 ">
+            <div className='flex flex-col gap-4'>
+            <div >
+            <MarqueeDemo/>
+            </div>
+              <div className="flex items-center justify-center  rounded-2xl px-10">
+                <TextRevealCard
+                  text="You know the business"
+                  revealText="I know the chemistry "
+                >
+                  <TextRevealCardTitle>
+                    Sometimes, you just need to see it.
+                  </TextRevealCardTitle>
+                  <TextRevealCardDescription>
+                    This is a text reveal card. Hover over the card to reveal
+                    the hidden text.
+                  </TextRevealCardDescription>
+                </TextRevealCard>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

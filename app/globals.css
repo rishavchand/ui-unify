@@ -19,6 +19,7 @@
     --muted-foreground: #6b7280; /* Muted text */
     --primary: #ffa500; /* Accent color */
     --border: #e5e7eb; /* Border color */
+  }
 }
 
 @layer base {
@@ -91,6 +92,4 @@
 
 html {
   scroll-behavior: smooth;
-}
-
 }
