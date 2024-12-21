@@ -20,10 +20,10 @@ const page = () => {
           It primarily features components, blocks, and templates geared towards
           creating landing pages and user-facing marketing materials.
         </p>
-        <h2 className="text-3xl font-bold align-middle flex justify-center dark:text-red-400 text-orange-500 mt-8">
+        <h2 className="text-3xl font-bold align-middle flex justify-center dark:text-red-400 text-orange-700 mt-8">
           Philosophy
         </h2>
-        <p className="flex justify-center text-lg font-medium dark:text-gray-400 text-gray-600 mt-4 px-10">
+        <p className="flex justify-center text-lg font-medium dark:text-gray-400 text-gray-600 mt-4 px-64">
           We believe that good design contributes significant value to software.
           It's one of the main methods of establishing trust between you and an
           internet stranger. Trust is important for internet businesses because
@@ -57,12 +57,12 @@ const page = () => {
           <a href="https://ui.shadcn.com" className="text-blue-500">
             https://ui.shadcn.com
           </a>
-          ,{' '}
+          ,{'  '}
           <a href="https://magicui.com" className="text-blue-500">
             MagicUI
           </a>
-          , and{' '}
-          <a href="https://acernity.com" className="text-blue-500">
+          , and{'  '}
+          <a href="https://acernity.com" className="text-blue-500 pl-4">
             Acernity
           </a>
           .
