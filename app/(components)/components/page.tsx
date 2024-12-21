@@ -1,151 +1,182 @@
 import React from 'react';
-import { Snippet } from '@nextui-org/snippet';
-import { Package, Rocket, CheckCircle } from 'lucide-react';
+import { Snippet } from '@nextui-org/snippet'; // For code snippets
+import {
+  FaCode,
+  FaCheckCircle,
+  FaArrowRight,
+  FaTerminal,
+} from 'react-icons/fa'; // Icons from react-icons
 
 const InstallationPage = () => {
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
-      {/* Installation Header */}
+      {/* Main Installation Heading */}
       <section className="mb-12">
-        <div className="flex items-center gap-4 mb-6">
-          <Package className="w-6 h-6 text-orange-500" />
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-200">
-            Installation
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-          Follow the steps below to install and set up your Next.js project and
-          start using UI-Unify components.
+        <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+          <FaCode className="inline-block mr-2 text-blue-600" /> Installation
+          Guide
+        </h1>
+        <p className="text-gray-600 dark:text-gray-400">
+          Follow this guide to set up Next.js with Tailwind CSS, utilities, and
+          configuration for a new project.
         </p>
       </section>
 
-      {/* Install Next.js */}
+      {/* Install Next.js Section */}
       <section className="mb-12">
-        <div className="flex items-center gap-4 mb-6">
-          <Rocket className="w-6 h-6 text-orange-500" />
-          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
-            Install Next.js
-          </h2>
-        </div>
-        <p className="text-gray-600 dark:text-gray-400">
-          Install Next.js with Create Next App:
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+          <FaArrowRight className="inline-block mr-2 text-green-600" /> Install
+          Next.js
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Install Next.js with{' '}
+          <code className="bg-gray-100 dark:bg-zinc-800 px-1 rounded">
+            create-next-app
+          </code>
+          .
         </p>
 
         <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-800 dark:text-gray-200">
-          Step 1: Create a new project
+          1. Create a New Project
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          Run the <code className="dark:bg-zinc-800 px-1 rounded">init</code>{' '}
-          command to create a new Next.js project:
+          Run the following command to create a new Next.js project:
         </p>
-        <div className='bg-gray-100 dark:bg-gray-800 p-4 rounded-lg'>
-          <Snippet color="default" symbol="">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+          <Snippet color="default" symbol={<FaTerminal />}>
             npx create-next-app@latest
           </Snippet>
         </div>
-        <h3 className="text-xl font-semibold mt-6 mb-2 text-gray-800 dark:text-gray-200">
-          Step 2: Setup prompts
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">
-          You will see the following prompts during installation:
-        </p>
-
-        <Snippet symbol="">
-          <span>What is your project named? my-app</span>
-          <span>Would you like to use TypeScript? No / Yes</span>
-          <span>Would you like to use ESLint? No / Yes</span>
-          <span>Would you like to use Tailwind CSS? No / Yes</span>
-          <span>Would you like to use `src/` directory? No / Yes</span>
-          <span>Would you like to use App Router? (recommended) No / Yes</span>
-          <span>
-            Would you like to customize the default import alias (@/*)? No / Yes
-          </span>
-          <span>What import alias would you like configured? @/*</span>
-        </Snippet>
-
-        <h3 className="text-xl font-semibold mt-6 mb-2 text-gray-800 dark:text-gray-200">
-          Step 3: Start the app
-        </h3>
-        <Snippet symbol="">
-          <span>cd my-app</span>
-          <span>npm run dev</span>
-        </Snippet>
       </section>
 
-      {/* Utilities Section */}
+      {/* Prompts Section */}
       <section className="mb-12">
-        <div className="flex items-center gap-4 mb-6">
-          <CheckCircle className="w-6 h-6 text-orange-500" />
-          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
-            Add Utilities
-          </h2>
-        </div>
-        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-          Add commonly used utilities to your project by installing the
-          following dependencies:
-        </p>
-
         <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-800 dark:text-gray-200">
+          Prompts You Will See
+        </h3>
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+          <Snippet symbol= "">
+            <span>What is your project named? my-app</span>
+            <span>Would you like to use TypeScript? No / Yes</span>
+            <span>Would you like to use ESLint? No / Yes</span>
+            <span>Would you like to use Tailwind CSS? No / Yes</span>
+            <span>Would you like to use `src/` directory? No / Yes</span>
+            <span>
+              Would you like to use App Router? (recommended) No / Yes
+            </span>
+            <span>
+              Would you like to customize the default import alias (@/*)? No /
+              Yes
+            </span>
+          </Snippet>
+        </div>
+      </section>
+
+      {/* Start the App */}
+      <section className="mb-12">
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-800 dark:text-gray-200">
+          <FaCheckCircle className="inline-block mr-2 text-green-600" /> Start
+          the App
+        </h3>
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+          <Snippet symbol={<FaTerminal />}>
+            <span>cd my-app</span>
+            <span>npm run dev</span>
+          </Snippet>
+        </div>
+      </section>
+
+      {/* Add Utilities */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+          <FaArrowRight className="inline-block mr-2 text-purple-600" /> Add
+          Utilities
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Install common utilities for handling classnames and animations.
+        </p>
+        <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
           Install Dependencies
         </h3>
-        <Snippet>npm i framer-motion clsx tailwind-merge</Snippet>
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+          <Snippet>npm i framer-motion clsx tailwind-merge</Snippet>
+        </div>
 
         <h3 className="text-xl font-semibold mt-6 mb-2 text-gray-800 dark:text-gray-200">
-          Add Utility Functions
+          Add Utility Function
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          Add the following utility function to your <code>lib/utils.ts</code>{' '}
-          file:
+          Add the following utility function to handle merging classes:
         </p>
-
-        <Snippet symbol="">
-          <span>{`import { ClassValue, clsx } from "clsx";`}</span>
-          <span>{`import { twMerge } from "tailwind-merge";`}</span>
-          <span></span>
-          <span>{`export function cn(...inputs: ClassValue[]) {`}</span>
-          <span>{`  return twMerge(clsx(...inputs));`}</span>
-          <span>{`}`}</span>
-        </Snippet>
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+          <Snippet symbol="">
+            <span>{`import { ClassValue, clsx } from "clsx";`}</span>
+            <span>{`import { twMerge } from "tailwind-merge";`}</span>
+            <span>{``}</span>
+            <span>{`export function cn(...inputs: ClassValue[]) {`}</span>
+            <span>{`  return twMerge(clsx(...inputs));`}</span>
+            <span>{`}`}</span>
+          </Snippet>
+        </div>
       </section>
 
-      {/* Tailwind Configuration */}
-      <section>
-        <div className="flex items-center gap-4 mb-6">
-          <Package className="w-6 h-6 text-orange-500" />
-          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
-            Base Tailwind Config File
-          </h2>
-        </div>
-        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-          Here’s the base configuration for your TailwindCSS setup:
+      {/* Tailwind Config */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+          <FaCode className="inline-block mr-2 text-blue-600" /> Base Tailwind
+          Config
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Add a base Tailwind config to enable dark mode and setup global CSS
+          variables for color.
         </p>
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+          <Snippet symbol={""}>
+            <span>{`import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";`}</span>
+            <span>{`import { Config } from "tailwindcss";`}</span>
+            <span>{``}</span>
+            <span>{`const config: Config = {`}</span>
+            <span>{`  content: [`}</span>
+            <span>{`    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",`}</span>
+            <span>{`    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",`}</span>
+            <span>{`  ],`}</span>
+            <span>{`  darkMode: "class",`}</span>
+            <span>{`  theme: {`}</span>
+            <span>{`    extend: {},`}</span>
+            <span>{`  },`}</span>
+            <span>{`  plugins: [addVariablesForColors],`}</span>
+            <span>{`};`}</span>
+          </Snippet>
+        </div>
+      </section>
 
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-800 dark:text-gray-200">
-          tailwind.config.ts
-        </h3>
-        <Snippet symbol="">
-          <span>{`import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";`}</span>
-          <span>{`import { Config } from "tailwindcss";`}</span>
-          <span>{`const config: Config = {`}</span>
-          <span>{`  content: [`}</span>
-          <span>{`    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",`}</span>
-          <span>{`    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",`}</span>
-          <span>{`    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",`}</span>
-          <span>{`  ],`}</span>
-          <span>{`  darkMode: "class",`}</span>
-          <span>{`  theme: {`}</span>
-          <span>{`    extend: {},`}</span>
-          <span>{`  },`}</span>
-          <span>{`  plugins: [addVariablesForColors],`}</span>
-          <span>{`};`}</span>
-          <span>{`function addVariablesForColors({ addBase, theme }) {`}</span>
-          <span>{`  const allColors = flattenColorPalette(theme("colors"));`}</span>
-          <span>{`  const newVars = Object.fromEntries(`}</span>
-          <span>{`    Object.entries(allColors).map(([key, val]) => [\`--\${key}\`, val])`}</span>
-          <span>{`  );`}</span>
-          <span>{`  addBase({ ":root": newVars });`}</span>
-          <span>{`}`}</span>
-        </Snippet>
+      {/* Next.js and React Fixes */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+          <FaArrowRight className="inline-block mr-2 text-red-600" /> Next.js 15
+          & React 19 Framer Motion Fix
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Apply the following fixes to ensure compatibility between Next.js 15,
+          React 19, and Framer Motion.
+        </p>
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+          <Snippet symbol={""}>
+            <span>{`"dependencies": {`}</span>
+            <span>{`  "framer-motion": "^12.0.0-alpha.1",`}</span>
+            <span>{`  "next": "15.0.3",`}</span>
+            <span>{`  "react": "19.0.0-rc-66855b96-20241106",`}</span>
+            <span>{`  "react-dom": "19.0.0-rc-66855b96-20241106",`}</span>
+            <span>{`  "tailwind-merge": "^2.5.5"`}</span>
+            <span>{`},`}</span>
+            <span>{`"overrides": {`}</span>
+            <span>{`  "framer-motion": {`}</span>
+            <span>{`    "react": "19.0.0-rc-66855b96-20241106",`}</span>
+            <span>{`    "react-dom": "19.0.0-rc-66855b96-20241106"`}</span>
+            <span>{`  }`}</span>
+            <span>{`}`}</span>
+          </Snippet>
+        </div>
       </section>
     </div>
   );
