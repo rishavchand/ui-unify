@@ -24,6 +24,22 @@ export const components = [
         label: 'Alert',
         Link: '/components/Alert',
       },
+      {
+        label: 'Avatar',
+        Link: '/components/Avatar',
+      },
+      {
+        label: 'Badge',
+        Link: '/components/Badge',
+      },
+      {
+        label: 'Breadcrumbs',
+        Link: '/components/Breadcrumbs',
+      },
+      {
+        label: 'Button',
+        Link: '/components/Button',
+      },
     ],
   },
 ];

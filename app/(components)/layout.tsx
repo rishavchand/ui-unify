@@ -22,13 +22,13 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       <div className="sm:grid sm:grid-cols-6 min-h-screen">
         <div className="col-span-1 px-4 pl-10 border-r pt-6 border-gray-200 dark:border-gray-700 hidden sm:block">
           {components.map((section, index) => (
-            <div key={index}>
+            <div key={index} className="mb-6">
               <h2 className="font-semibold text-lg mb-2">
                 {section.title || section.Installation || section.Components}
               </h2>
-              <ul>
+              <ul className="space-y-1">
                 {section.children.map((child, idx) => (
-                  <li key={idx} className="mb-1">
+                  <li key={idx}>
                     <a
                       href={child.Link}
                       className={`text-gray-600 dark:text-gray-200 hover:underline ${
