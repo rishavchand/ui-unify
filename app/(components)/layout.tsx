@@ -1,7 +1,10 @@
+"use client";
 import React, { Children } from 'react';
 import { components } from './components';
+import { usePathname } from 'next/navigation';
 
 const layout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
   return (
     <div>
       <header className="text-center mt-10 pb-10">
@@ -17,7 +20,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         </p>
       </header>
       <div className="sm:grid sm:grid-cols-6 min-h-screen">
-        <div className="col-span-1 px-4 pl-10  border-r  pt-6 border-gray-200 dark:border-gray-700 hidden sm:block">
+        <div className="col-span-1 px-4 pl-10 border-r pt-6 border-gray-200 dark:border-gray-700 hidden sm:block">
           {components.map((section, index) => (
             <div key={index}>
               <h2 className="font-semibold text-lg mb-2">
@@ -28,7 +31,9 @@ const layout = ({ children }: { children: React.ReactNode }) => {
                   <li key={idx} className="mb-1">
                     <a
                       href={child.Link}
-                      className="text-gray-600 dark:text-gray-200 hover:underline"
+                      className={`text-gray-600 dark:text-gray-200 hover:underline ${
+                        pathname === child.Link ? 'font-bold text-red-500' : ''
+                      }`}
                     >
                       {child.label}
                     </a>
