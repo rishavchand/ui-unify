@@ -152,14 +152,20 @@ export function Hero() {
           <MarqueeDemo />
         </div>
         <div>
-          <AnimatedShinyTextDemo/>
+          <AnimatedShinyTextDemo />
         </div>
-        <div className='flex justify-center my-10'>
-          <FlipWords 
-            words={['UÍ-Unify is based on ', 'Nextjs', 'TailwindCSS', 'Acernity', 'Magic UI', 'Shadcn/ui']}
+        <div className="flex justify-center my-10">
+          <FlipWords
+            words={[
+              'UÍ-Unify is based on ',
+              'Nextjs',
+              'TailwindCSS',
+              'Acernity',
+              'Magic UI',
+              'Shadcn/ui',
+            ]}
             duration={2000}
             className="text-3xl font-bold text-gray-600 dark:text-gray-400"
-
           />
         </div>
         <div className="flex items-center justify-center  rounded-2xl px-10">
@@ -177,9 +183,7 @@ export function Hero() {
           </TextRevealCard>
         </div>
       </div>
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   );
 }
