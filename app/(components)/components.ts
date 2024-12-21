@@ -4,7 +4,7 @@ export const components = [
     children: [
       {
         label: 'Twitter @pankajkumardev',
-        link: 'https://twitter.com/pankajkumardev',
+        Link: 'https://twitter.com/pankajkumardev',
       },
     ],
   },
@@ -12,12 +12,8 @@ export const components = [
     Installation: 'Getting Started',
     children: [
       {
-        label: 'Introduction',
-        Link: '/components',
-      },
-      {
         label: 'Installation',
-        Link: '/components/Installation',
+        Link: '/components',
       },
     ],
   },
