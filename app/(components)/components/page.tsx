@@ -9,7 +9,7 @@ import {
 
 const InstallationPage = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
+    <div className="max-w-4xl mx-auto px-6 py-12 overflow-auto ">
       {/* Main Installation Heading */}
       <section className="mb-12">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
