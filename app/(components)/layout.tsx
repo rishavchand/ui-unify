@@ -16,7 +16,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
           Explore examples and demos of our unified UI components in action.
         </p>
       </header>
-      <div className="sm:grid sm:grid-cols-6 min-h-screen  border-gray-200 dark:border-gray-700">
+      <div className="sm:grid sm:grid-cols-6 min-h-screen  sm:border-b sm:border-t border-gray-200 dark:border-gray-700">
         <div className="col-span-1 px-4 pl-10  border-r  pt-6 border-gray-200 dark:border-gray-700 hidden sm:block">
           {components.map((section, index) => (
             <div key={index}>
