@@ -55,7 +55,7 @@ const InstallationPage = () => {
           Prompts You Will See
         </h3>
         <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
-          <Snippet symbol= "">
+          <Snippet symbol="">
             <span>What is your project named? my-app</span>
             <span>Would you like to use TypeScript? No / Yes</span>
             <span>Would you like to use ESLint? No / Yes</span>
@@ -131,7 +131,7 @@ const InstallationPage = () => {
           variables for color.
         </p>
         <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
-          <Snippet symbol={""}>
+          <Snippet symbol={''}>
             <span>{`import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";`}</span>
             <span>{`import { Config } from "tailwindcss";`}</span>
             <span>{``}</span>
@@ -146,6 +146,17 @@ const InstallationPage = () => {
             <span>{`  },`}</span>
             <span>{`  plugins: [addVariablesForColors],`}</span>
             <span>{`};`}</span>
+            <span>{` // This plugin adds each Tailwind color as a global CSS variable,
+            e.g. var(--gray-200).`}</span>
+            <span>{`{`}</span>
+            <span>{`  let allColors = flattenColorPalette(theme("colors"));`}</span>
+            <span>{`  let newVars = Object.fromEntries(`}</span>
+            <span>{`    Object.entries(allColors).map(([key, val]) => [\`--\${key}\`, val])`}</span>
+            <span>{`  );`}</span>
+            <span>{`  addBase({`}</span>
+            <span>{`    ":root": newVars,`}</span>
+            <span>{`  });`}</span>
+            <span>{`}`}</span>
           </Snippet>
         </div>
       </section>
@@ -161,7 +172,7 @@ const InstallationPage = () => {
           React 19, and Framer Motion.
         </p>
         <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
-          <Snippet symbol={""}>
+          <Snippet symbol={''}>
             <span>{`"dependencies": {`}</span>
             <span>{`  "framer-motion": "^12.0.0-alpha.1",`}</span>
             <span>{`  "next": "15.0.3",`}</span>
@@ -171,6 +182,27 @@ const InstallationPage = () => {
             <span>{`},`}</span>
             <span>{`"overrides": {`}</span>
             <span>{`  "framer-motion": {`}</span>
+            <span>{`    "react": "19.0.0-rc-66855b96-20241106",`}</span>
+            <span>{`    "react-dom": "19.0.0-rc-66855b96-20241106"`}</span>
+            <span>{`  }`}</span>
+            <span>{`}`}</span>
+          </Snippet>
+        </div>
+        <p className="text-gray-600 dark:text-gray-400 mb-4 mt-4">
+          if you're using <code>motion</code> instead of{' '}
+          <code>framer-motion</code>, you can make the following changes:
+        </p>
+
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+          <Snippet symbol={''}>
+            <span>{`"motion": "^12.0.0-alpha.1",`}</span>
+            <span>{`"next": "15.0.3",`}</span>
+            <span>{`"react": "19.0.0-rc-66855b96-20241106",`}</span>
+            <span>{`"react-dom": "19.0.0-rc-66855b96-20241106",`}</span>
+            <span>{`"tailwind-merge": "^2.5.5"`}</span>
+            <span>{`},`}</span>
+            <span>{`"overrides": {`}</span>
+            <span>{`  "motion": {`}</span>
             <span>{`    "react": "19.0.0-rc-66855b96-20241106",`}</span>
             <span>{`    "react-dom": "19.0.0-rc-66855b96-20241106"`}</span>
             <span>{`  }`}</span>
