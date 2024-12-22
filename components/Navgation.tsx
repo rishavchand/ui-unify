@@ -78,7 +78,7 @@ export function Navigation() {
             </a>
           ))}
           <ThemeToggle />
-          <div className="sm:hidden flex flex-col ">
+          <div className="sm:hidden flex flex-col  ">
             <button
               onClick={() => {
                 if (isOpen) {
@@ -90,14 +90,14 @@ export function Navigation() {
               className="sm:hidden"
             >
               {!isOpen ? (
-                <Menu className=" mt-2 h-6 w-6" />
+                <Menu className="  h-6 w-6" />
               ) : (
-                <X className="h-6 w-6 mt-2 " />
+                <X className="h-6 w-6  " />
               )}
             </button>
             <div
               className={`fixed inset-0 z-40 transition-opacity duration-300 ${
-              isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
               onClick={() => setIsOpen(false)}
             >
