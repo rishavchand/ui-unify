@@ -9,7 +9,7 @@ import {
 
 const InstallationPage = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 overflow-auto ">
+    <div className="max-w-4xl mx-auto px-6 py-12 overflow-auto">
       {/* Main Installation Heading */}
       <section className="mb-12">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
@@ -42,7 +42,7 @@ const InstallationPage = () => {
         <p className="text-gray-600 dark:text-gray-400 mb-4">
           Run the following command to create a new Next.js project:
         </p>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded overflow-x-auto">
           <Snippet color="default" symbol={<FaTerminal />}>
             npx create-next-app@latest
           </Snippet>
@@ -54,7 +54,7 @@ const InstallationPage = () => {
         <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-800 dark:text-gray-200">
           Prompts You Will See
         </h3>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded overflow-x-auto">
           <Snippet symbol="">
             <span>What is your project named? my-app</span>
             <span>Would you like to use TypeScript? No / Yes</span>
@@ -78,7 +78,7 @@ const InstallationPage = () => {
           <FaCheckCircle className="inline-block mr-2 text-green-600" /> Start
           the App
         </h3>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded overflow-x-auto">
           <Snippet symbol={<FaTerminal />}>
             <span>cd my-app</span>
             <span>npm run dev</span>
@@ -98,7 +98,7 @@ const InstallationPage = () => {
         <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
           Install Dependencies
         </h3>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded overflow-x-auto">
           <Snippet>npm i framer-motion clsx tailwind-merge</Snippet>
         </div>
 
@@ -108,7 +108,7 @@ const InstallationPage = () => {
         <p className="text-gray-600 dark:text-gray-400 mb-4">
           Add the following utility function to handle merging classes:
         </p>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded overflow-x-auto">
           <Snippet symbol="">
             <span>{`import { ClassValue, clsx } from "clsx";`}</span>
             <span>{`import { twMerge } from "tailwind-merge";`}</span>
@@ -130,7 +130,7 @@ const InstallationPage = () => {
           Add a base Tailwind config to enable dark mode and setup global CSS
           variables for color.
         </p>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded overflow-x-auto">
           <Snippet symbol={''}>
             <span>{`import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";`}</span>
             <span>{`import { Config } from "tailwindcss";`}</span>
@@ -171,7 +171,7 @@ const InstallationPage = () => {
           Apply the following fixes to ensure compatibility between Next.js 15,
           React 19, and Framer Motion.
         </p>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded overflow-x-auto">
           <Snippet symbol={''}>
             <span>{`"dependencies": {`}</span>
             <span>{`  "framer-motion": "^12.0.0-alpha.1",`}</span>
@@ -193,7 +193,7 @@ const InstallationPage = () => {
           <code>framer-motion</code>, you can make the following changes:
         </p>
 
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded">
+        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded overflow-x-auto">
           <Snippet symbol={''}>
             <span>{`"motion": "^12.0.0-alpha.1",`}</span>
             <span>{`"next": "15.0.3",`}</span>
