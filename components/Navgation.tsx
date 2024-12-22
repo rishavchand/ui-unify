@@ -95,7 +95,15 @@ export function Navigation() {
                 <X className="h-6 w-6 mt-2 " />
               )}
             </button>
-        </div>
+            <div
+              className={`fixed inset-0 z-40 transition-opacity duration-300 ${
+              isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              {isOpen && <Sidebar />}
+            </div>
+          </div>
         </div>
       </div>
     </nav>
