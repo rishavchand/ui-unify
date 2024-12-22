@@ -1,9 +1,17 @@
 'use client';
 
-import { ChartNoAxesGantt, GithubIcon, TwitterIcon } from 'lucide-react';
+import {
+  ChartNoAxesGantt,
+  X,
+  GithubIcon,
+  Menu,
+  TwitterIcon,
+} from 'lucide-react';
 import Link from 'next/link';
 import { ThemeToggle } from './ThemeToggle';
 import { NavLink } from './Nav-link';
+import Sidebar from './Sidebar';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
   { name: 'Components', href: '/components' },
@@ -25,6 +33,18 @@ const socialLinks = [
 ] as const;
 
 export function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
     <nav className="sticky top-0 z-50 w-full  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6">
       <div className="container flex h-16 items-center justify-between">
@@ -58,6 +78,24 @@ export function Navigation() {
             </a>
           ))}
           <ThemeToggle />
+          <div className="sm:hidden flex flex-col ">
+            <button
+              onClick={() => {
+                if (isOpen) {
+                  setIsOpen(false);
+                } else {
+                  setIsOpen(true);
+                }
+              }}
+              className="sm:hidden"
+            >
+              {!isOpen ? (
+                <Menu className=" mt-2 h-6 w-6" />
+              ) : (
+                <X className="h-6 w-6 mt-2 " />
+              )}
+            </button>
+        </div>
         </div>
       </div>
     </nav>
