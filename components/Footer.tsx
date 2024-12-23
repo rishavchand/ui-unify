@@ -2,11 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import { Github, Twitter, Linkedin, ChartNoAxesGantt } from 'lucide-react';
 
-
 interface FooterProps {
   year?: number;
   email?: string;
 }
+
+const navLinks = [
+  { name: 'Components', href: '/components' },
+  { name: 'Docs', href: '/docs' },
+  { name: 'Showcase', href: '/showcase' },
+] as const;
 
 const Footer: React.FC<FooterProps> = ({
   year = new Date().getFullYear(),
@@ -15,13 +20,32 @@ const Footer: React.FC<FooterProps> = ({
   return (
     <footer className=" dark:text-gray-300 py-8  mt-10">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold flex"><ChartNoAxesGantt />UÍ-Unify</h3>
+            <h3 className="text-lg font-semibold flex">
+              <ChartNoAxesGantt />
+              UÍ-Unify
+            </h3>
             <p className="text-sm">
-            The Ultimate UI Library Collection. Multiple UI, One Platform.
+              The Ultimate UI Library Collection. Multiple UI, One Platform.
             </p>
             <p className="text-sm">© {year} UÍ-Unify. All rights reserved.</p>
+          </div>
+
+          <div>
+            <h4 className="text-md font-semibold mb-4">Pages</h4>
+            <ul className="space-y-2">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm hover:text-red-500 transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>
