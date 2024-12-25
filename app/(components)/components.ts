@@ -45,8 +45,8 @@ export const components = [
         Link: '/components/Calendar',
       },
       {
-        label: 'Carousel',
-        Link: '/components/Carousel',
+        label: 'Card',
+        Link: '/components/Card',
       },
       {
         label: 'Collapse',
