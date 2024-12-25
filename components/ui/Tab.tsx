@@ -14,23 +14,31 @@ export function Tab({
   tab2Content,
 }: TabsProps) {
   return (
-    <Tabs defaultValue={tab1Name} className="w-[400px]">
-      <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger
-          value={tab1Name}
-          className="rounded-b-none data-[state=active]:bg-muted data-[state=active]:border-b-2 data-[state=active]:border-b-active dark:data-[state=active]:bg-dark-muted dark:data-[state=active]:border-b-dark-active"
-        >
-          {tab1Name}
-        </TabsTrigger>
-        <TabsTrigger
-          value={tab2Name}
-          className="rounded-b-none data-[state=active]:bg-muted data-[state=active]:border-b-2 data-[state=active]:border-b-active dark:data-[state=active]:bg-dark-muted dark:data-[state=active]:border-b-dark-active"
-        >
-          {tab2Name}
-        </TabsTrigger>
+    <Tabs defaultValue={tab1Name} className="">
+      <TabsList className="grid w-full grid-cols-3">
+        <div className="flex flex-row mb-10">
+          <TabsTrigger
+            value={tab1Name}
+            className="  w-40 rounded-b-none data-[state=active]:bg-muted data-[state=active]:border-b-2 data-[state=active]:border-b-active dark:data-[state=active]:bg-dark-muted dark:data-[state=active]:border-b-dark-active"
+          >
+            {tab1Name}
+          </TabsTrigger>
+          <TabsTrigger
+            value={tab2Name}
+            className=" w-40 rounded-b-none data-[state=active]:bg-muted data-[state=active]:border-b-2 data-[state=active]:border-b-active dark:data-[state=active]:bg-dark-muted dark:data-[state=active]:border-b-dark-active"
+          >
+            {tab2Name}
+          </TabsTrigger>
+        </div>
       </TabsList>
-      <TabsContent value={tab1Name}>{tab1Content}</TabsContent>
-      <TabsContent value={tab2Name}>{tab2Content}</TabsContent>
+      <div className="border  p-4 rounded-md  border-slate-400 ">
+        <TabsContent className=" " value={tab1Name}>
+          {tab1Content}
+        </TabsContent>
+        <TabsContent className=" overflow-auto w-[1000px]" value={tab2Name}>
+          {tab2Content}
+        </TabsContent>
+      </div>
     </Tabs>
   );
 }

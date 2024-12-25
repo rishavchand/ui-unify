@@ -25,7 +25,7 @@ const page = () => {
           <P2 Lib="shadcn/ui" />
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 w-full  h-96 overflow-auto">
         <Tab
           tab1Name="Preview"
           tab1Content={
