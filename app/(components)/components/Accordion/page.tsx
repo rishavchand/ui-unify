@@ -1,7 +1,7 @@
 import H1 from '@/components/ui/heading';
 import P2 from '@/components/ui/Paragraph';
 import P1 from '@/components/ui/Paragraph1';
-import { Tab } from '@/components/ui/Tab';
+import { CodePreview } from '@/components/ui/CodePreview';
 
 import React from 'react';
 import { AccordionDemo } from '../preview/AccordianDemo';
@@ -26,8 +26,8 @@ const page = () => {
           <P2 Lib="shadcn/ui" />
         </div>
       </div>
-      <div className="mt-4 w-full  h-96 overflow-auto">
-        <Tab
+      <div className="mt-4 w-full max-h-full overflow-auto">
+        <CodePreview
           tab1Name="Preview"
           tab1Content={
             <div>
@@ -38,26 +38,39 @@ const page = () => {
           tab2Content={
             <div className="">
               <CodeBlockDemo
-                code={`const DummyComponent = () => {
-  const [count, setCount] = React.useState(0);
- 
-  const handleClick = () => {
-    setCount(prev => prev + 1);
-  };
- 
+                code={`import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+export function AccordionDemo() {
   return (
-    <div className="p-4 border rounded-lg">
-      <h2 className="text-xl font-bold mb-4">Fights Counter</h2>
-      <p className="mb-2">Fight Club Fights Count: {count}</p>
-      <button 
-        onClick={handleClick}
-        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-      >
-        Increment
-      </button>
-    </div>
-  );
-};
+    <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other
+          components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It&apos;s animated by default, but you can disable it if you
+          prefer.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  )
+}
 `}
                 filename="DummyComponent.tsx"
                 highlightLines={[]}
