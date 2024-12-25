@@ -41,8 +41,8 @@ export const components = [
         Link: '/components/Breadcrumb',
       },
       {
-        label: 'Card',
-        Link: '/components/Card',
+        label: 'Calendar',
+        Link: '/components/Calendar',
       },
       {
         label: 'Carousel',
