@@ -1,7 +1,5 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { Snippet } from '@nextui-org/snippet';
-import { FaTerminal } from 'react-icons/fa';
 import { BadgeDemo } from '../preview/BadgeDemo';
 
 export default function page() {
