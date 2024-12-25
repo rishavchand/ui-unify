@@ -33,8 +33,8 @@ export const components = [
         Link: '/components/Avatar',
       },
       {
-        label: 'Button',
-        Link: '/components/Button',
+        label: 'Badge',
+        Link: '/components/Badge',
       },
       {
         label: 'Button Group',
