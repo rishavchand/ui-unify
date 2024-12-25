@@ -1,8 +1,8 @@
-"use client";
-import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { IconCheck, IconCopy } from "@tabler/icons-react";
+'use client';
+import React from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { IconCheck, IconCopy } from '@tabler/icons-react';
 
 type CodeBlockProps = {
   language: string;
@@ -54,7 +54,7 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative w-full rounded-lg bg-slate-900 p-4 font-mono text-sm">
+    <div className="relative w-full rounded-lg bg-slate-900 p-4 font-mono text-sm ">
       <div className="flex flex-col gap-2">
         {tabsExist && (
           <div className="flex  overflow-x-auto">
@@ -64,8 +64,8 @@ export const CodeBlock = ({
                 onClick={() => setActiveTab(index)}
                 className={`px-3 !py-2 text-xs transition-colors font-sans ${
                   activeTab === index
-                    ? "text-white"
-                    : "text-zinc-400 hover:text-zinc-200"
+                    ? 'text-white'
+                    : 'text-zinc-400 hover:text-zinc-200'
                 }`}
               >
                 {tab.name}
@@ -91,18 +91,18 @@ export const CodeBlock = ({
         customStyle={{
           margin: 0,
           padding: 0,
-          background: "transparent",
-          fontSize: "0.875rem", // text-sm equivalent
+          background: 'transparent',
+          fontSize: '0.875rem', // text-sm equivalent
         }}
         wrapLines={true}
         showLineNumbers={true}
         lineProps={(lineNumber) => ({
           style: {
             backgroundColor: activeHighlightLines.includes(lineNumber)
-              ? "rgba(255,255,255,0.1)"
-              : "transparent",
-            display: "block",
-            width: "100%",
+              ? 'rgba(255,255,255,0.1)'
+              : 'transparent',
+            display: 'block',
+            width: '100%',
           },
         })}
         PreTag="div"

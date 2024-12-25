@@ -14,7 +14,7 @@ export function CodeBlockDemo({
   highlightLines: number[];
 }) {
   return (
-    <div className="max-w-4xl mx-auto w-full h-full">
+    <div className="max-w-4xl mx-auto w-full h-full ">
       <CodeBlock
         language="tsx"
         filename={filename}
