@@ -2,6 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
+import { AccordionDemo } from '../preview/AccordianDemo';
 
 export default function page() {
   return (
@@ -47,6 +48,7 @@ export default function page() {
         library="Shadcn/ui"
         filename="Accordion.tsx"
         cli={`npx shadcn@latest add accordion`}
+        Tab1 = {<AccordionDemo />}
         child={
           <>
             <div>

@@ -8,7 +8,7 @@ interface TabsProps {
 
 export function Installation({ tab1Content, tab2Content }: TabsProps) {
   return (
-    <Tabs defaultValue="CLI" className="overflow-hidden h-full">
+    <Tabs defaultValue="cli" className="overflow-hidden h-full">
       <TabsList className="flex w-full justify-start border-b border-gray-300 dark:border-gray-700">
         <TabsTrigger
           value="cli"

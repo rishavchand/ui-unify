@@ -18,6 +18,7 @@ interface PageProps {
   filename: string;
   cli: string;
   child?: React.ReactNode;
+  Tab1? : React.ReactNode;
 }
 
 const FullComponent: React.FC<PageProps> = ({
@@ -28,6 +29,7 @@ const FullComponent: React.FC<PageProps> = ({
   filename,
   cli,
   child,
+  Tab1
 }) => {
   return (
     <div className="md:px-20 px-4">
@@ -42,7 +44,7 @@ const FullComponent: React.FC<PageProps> = ({
         <CodePreview
           tab1Content={
             <div>
-              <AccordionDemo />
+             {Tab1}
             </div>
           }
           tab2Content={
