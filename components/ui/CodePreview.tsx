@@ -29,11 +29,11 @@ export function CodePreview({
           {tab2Name}
         </TabsTrigger>
       </TabsList>
-      <div className="mt-8 pb-10 border max-h-96 border-gray-300 dark:border-gray-700 rounded-lg ">
-        <TabsContent className="p-4  h-full overflow-auto " value={tab1Name}>
+      <div className="mt-8 border max-h-96 border-gray-300 dark:border-gray-700 rounded-lg ">
+        <TabsContent className="p-4  max-h-96 overflow-auto " value={tab1Name}>
           {tab1Content}
         </TabsContent>
-        <TabsContent className="p-4 h-full overflow-auto " value={tab2Name}>
+        <TabsContent className="p-4 max-h-96 overflow-auto " value={tab2Name}>
           {tab2Content}
         </TabsContent>
       </div>
