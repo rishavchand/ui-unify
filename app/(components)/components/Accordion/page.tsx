@@ -6,6 +6,7 @@ import { Tab } from '@/components/ui/Tab';
 import React from 'react';
 import { AccordionDemo } from '../preview/AccordianDemo';
 import { Snippet } from '@nextui-org/snippet';
+import { CodeBlockDemo } from '@/components/ui/Codeblock';
 
 const page = () => {
   const exampleTabs = [
@@ -36,40 +37,31 @@ const page = () => {
           tab2Name="Code"
           tab2Content={
             <div className="">
-              <Snippet symbol="">
-                <span>{`import {`}</span>
-                <span>{`  Accordion,`}</span>
-                <span>{`  AccordionContent,`}</span>
-                <span>{`  AccordionItem,`}</span>
-                <span>{`  AccordionTrigger,`}</span>
-                <span>{`} from "@/components/ui/accordion"`}</span>
-                <span>{``}</span>
-                <span>{`export function AccordionDemo() {`}</span>
-                <span>{`  return (`}</span>
-                <span>{`    <Accordion type="single" collapsible className="w-full">`}</span>
-                <span>{`      <AccordionItem value="item-1">`}</span>
-                <span>{`        <AccordionTrigger>Is it accessible?</AccordionTrigger>`}</span>
-                <span>{`        <AccordionContent>`}</span>
-                <span>{`          Yes. It adheres to the WAI-ARIA design pattern.`}</span>
-                <span>{`        </AccordionContent>`}</span>
-                <span>{`      </AccordionItem>`}</span>
-                <span>{`      <AccordionItem value="item-2">`}</span>
-                <span>{`        <AccordionTrigger>Is it styled?</AccordionTrigger>`}</span>
-                <span>{`        <AccordionContent>`}</span>
-                <span>{`          Yes. It comes with default styles that matches the other`}</span>
-                <span>{`          components&apos; aesthetic.`}</span>
-                <span>{`        </AccordionContent>`}</span>
-                <span>{`      </AccordionItem>`}</span>
-                <span>{`      <AccordionItem value="item-3">`}</span>
-                <span>{`        <AccordionTrigger>Is it animated?</AccordionTrigger>`}</span>
-                <span>{`        <AccordionContent>`}</span>
-                <span>{`          Yes. It&apos;s animated by default, but you can disable it if you`}</span>
-                <span>{`          prefer.`}</span>
-                <span>{`        </AccordionContent>`}</span>
-                <span>{`      </AccordionItem>`}</span>
-                <span>{`    </Accordion>`}</span>
-                <span>{`  )}`}</span>
-              </Snippet>
+              <CodeBlockDemo
+                code={`const DummyComponent = () => {
+  const [count, setCount] = React.useState(0);
+ 
+  const handleClick = () => {
+    setCount(prev => prev + 1);
+  };
+ 
+  return (
+    <div className="p-4 border rounded-lg">
+      <h2 className="text-xl font-bold mb-4">Fights Counter</h2>
+      <p className="mb-2">Fight Club Fights Count: {count}</p>
+      <button 
+        onClick={handleClick}
+        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      >
+        Increment
+      </button>
+    </div>
+  );
+};
+`}
+                filename="DummyComponent.tsx"
+                highlightLines={[]}
+              />
             </div>
           }
         />
