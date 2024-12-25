@@ -6,6 +6,7 @@ import { CodePreview } from '@/components/ui/CodePreview';
 import React from 'react';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { AccordionDemo } from '@/app/(components)/components/preview/AccordianDemo';
+import { Installation } from './Installation';
 
 interface PageProps {
   heading: string;
@@ -54,8 +55,19 @@ const FullComponent: React.FC<PageProps> = ({
           <h1 className='sm:text-2xl sm:mt-10 mt-4 text-lg font-bold '>Installation</h1>
           <p className='mt-2 border border-b-0 dark:border-gray-700 border-gray-300'></p>
         </div>
-        <div>
-            
+        <div className='mt-4'>
+            <Installation 
+            tab1Content={
+              <div>
+                <P2 Lib={library} />
+              </div>
+            }
+            tab2Content={
+                <div>
+                    <P2 Lib={library} />
+                </div>
+                }
+            />
         </div>
       </div>
     </div>
