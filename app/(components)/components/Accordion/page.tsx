@@ -28,13 +28,11 @@ const page = () => {
       </div>
       <div className="mt-4 w-full max-h-full overflow-auto">
         <CodePreview
-          tab1Name="Preview"
           tab1Content={
             <div>
               <AccordionDemo />
             </div>
           }
-          tab2Name="Code"
           tab2Content={
             <div className="">
               <CodeBlockDemo

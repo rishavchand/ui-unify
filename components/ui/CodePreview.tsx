@@ -1,39 +1,35 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { FaCode, FaEye } from 'react-icons/fa';
 
 interface TabsProps {
-  tab1Name: string;
   tab1Content: React.ReactNode;
-  tab2Name: string;
   tab2Content: React.ReactNode;
 }
 
-export function CodePreview({
-  tab1Name,
-  tab1Content,
-  tab2Name,
-  tab2Content,
-}: TabsProps) {
+export function CodePreview({ tab1Content, tab2Content }: TabsProps) {
   return (
-    <Tabs defaultValue={tab1Name} className="overflow-hidden h-full">
+    <Tabs defaultValue="Code" className="overflow-hidden h-full">
       <TabsList className="flex w-full justify-start border-b border-gray-300 dark:border-gray-700">
         <TabsTrigger
-          value={tab1Name}
-          className="px-4 py-2 border-b-2 border-transparent data-[state=active]:border-b-blue-500 dark:data-[state=active]:border-b-blue-400 data-[state=active]:rounded-none"
+          value="Code"
+          className="px-4 py-2 border-b-2 border-transparent data-[state=active]:border-b-blue-500 dark:data-[state=active]:border-b-blue-400 data-[state=active]:rounded-none flex items-center"
         >
-          {tab1Name}
+          <FaCode className="mr-2" />
+          Code
         </TabsTrigger>
         <TabsTrigger
-          value={tab2Name}
-          className="px-4 py-2 data-[state=active]:border-b-2 data-[state=active]:border-b-blue-500 dark:data-[state=active]:border-b-blue-400 data-[state=active]:rounded-none"
+          value="Preview"
+          className="px-4 py-2 data-[state=active]:border-b-2 data-[state=active]:border-b-blue-500 dark:data-[state=active]:border-b-blue-400 data-[state=active]:rounded-none flex items-center"
         >
-          {tab2Name}
+          <FaEye className="mr-2" />
+          Preview
         </TabsTrigger>
       </TabsList>
       <div className="mt-8 border max-h-96 border-gray-300 dark:border-gray-700 rounded-lg ">
-        <TabsContent className="p-8  max-h-96 overflow-auto " value={tab1Name}>
+        <TabsContent className="p-8 max-h-96 overflow-auto" value="Code">
           {tab1Content}
         </TabsContent>
-        <TabsContent className="p-2 max-h-96 overflow-auto " value={tab2Name}>
+        <TabsContent className="p-2 max-h-96 overflow-auto" value="Preview">
           {tab2Content}
         </TabsContent>
       </div>
