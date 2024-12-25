@@ -110,7 +110,7 @@ export { Avatar, AvatarImage, AvatarFallback }
                   />
                 </div>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 mt-4">
                 <div className="w-6 h-6 rounded-full bg-gray-800 dark:bg-gray-200 flex items-center justify-center text-white dark:text-black">
                   3
                 </div>

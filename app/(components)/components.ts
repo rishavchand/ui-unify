@@ -29,8 +29,8 @@ export const components = [
         Link: '/components/Alert',
       },
       {
-        label: 'Breadcrumbs',
-        Link: '/components/Breadcrumbs',
+        label: 'Avatar',
+        Link: '/components/Avatar',
       },
       {
         label: 'Button',
