@@ -25,8 +25,8 @@ export const components = [
         Link: '/components/Accordion',
       },
       {
-        label: 'Badge',
-        Link: '/components/Badge',
+        label: 'Alert',
+        Link: '/components/Alert',
       },
       {
         label: 'Breadcrumbs',
