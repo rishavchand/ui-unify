@@ -5,7 +5,6 @@ import { CodePreview } from '@/components/ui/CodePreview';
 
 import React from 'react';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { AccordionDemo } from '@/app/(components)/components/preview/AccordianDemo';
 import { Installation } from './Installation';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';

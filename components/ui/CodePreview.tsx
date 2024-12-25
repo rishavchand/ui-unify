@@ -26,11 +26,14 @@ export function CodePreview({ tab1Content, tab2Content }: TabsProps) {
         </TabsTrigger>
       </TabsList>
       <div className="mt-8 border max-h-96 border-gray-300 dark:border-gray-700 rounded-lg ">
-        <TabsContent className="p-8 max-h-96 overflow-auto" value="Code">
-          {tab1Content}
-        </TabsContent>
-        <TabsContent className="p-2 max-h-96 overflow-auto" value="Preview">
+        <TabsContent
+          className="p-2 max-h-96 overflow-auto  "
+          value="Preview"
+        >
           {tab2Content}
+        </TabsContent>
+        <TabsContent className="p-2 max-h-96 overflow-auto flex align-center justify-center w-full " value="Code">
+          {tab1Content}
         </TabsContent>
       </div>
     </Tabs>

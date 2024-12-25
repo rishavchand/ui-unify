@@ -32,7 +32,7 @@ export function CalendarDemo() {
         library="Shadcn/ui"
         filename="Calendar.tsx"
         cli={`npx shadcn@latest add calendar`}
-        Tab1={<CalendarDemo/>}
+        Tab1={<CalendarDemo />}
         child={
           <>
             <div>
