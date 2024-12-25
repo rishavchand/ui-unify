@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { AvatarDemo } from '../preview/AvatarDemo';
+import { CalendarDemo } from '../preview/CalendarDemo';
 
 export default function page() {
   return (
@@ -32,7 +32,7 @@ export function CalendarDemo() {
         library="Shadcn/ui"
         filename="Calendar.tsx"
         cli={`npx shadcn@latest add calendar`}
-        Tab1={<AvatarDemo />}
+        Tab1={<CalendarDemo/>}
         child={
           <>
             <div>
