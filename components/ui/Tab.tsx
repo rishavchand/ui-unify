@@ -1,28 +1,36 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-export function TabsDemo() {
+interface TabsProps {
+  tab1Name: string;
+  tab1Content: React.ReactNode;
+  tab2Name: string;
+  tab2Content: React.ReactNode;
+}
+
+export function Tab({
+  tab1Name,
+  tab1Content,
+  tab2Name,
+  tab2Content,
+}: TabsProps) {
   return (
-    <Tabs defaultValue="account" className="w-[400px]">
-      <TabsList className="grid w-full grid-cols-3 ">
+    <Tabs defaultValue={tab1Name} className="w-[400px]">
+      <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger
-          value="account"
+          value={tab1Name}
           className="rounded-b-none data-[state=active]:bg-muted data-[state=active]:border-b-2 data-[state=active]:border-b-active dark:data-[state=active]:bg-dark-muted dark:data-[state=active]:border-b-dark-active"
         >
-          Account
+          {tab1Name}
         </TabsTrigger>
         <TabsTrigger
-          value="password"
+          value={tab2Name}
           className="rounded-b-none data-[state=active]:bg-muted data-[state=active]:border-b-2 data-[state=active]:border-b-active dark:data-[state=active]:bg-dark-muted dark:data-[state=active]:border-b-dark-active"
         >
-          Password
+          {tab2Name}
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="account">
-        <p>hey</p>
-      </TabsContent>
-      <TabsContent value="password">
-        <p>hey2</p>
-      </TabsContent>
+      <TabsContent value={tab1Name}>{tab1Content}</TabsContent>
+      <TabsContent value={tab2Name}>{tab2Content}</TabsContent>
     </Tabs>
   );
 }
