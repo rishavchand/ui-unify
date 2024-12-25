@@ -16,6 +16,8 @@ interface PageProps {
   library: string;
   code: string;
   filename: string;
+  cli: string;
+  child?: React.ReactNode;
 }
 
 const FullComponent: React.FC<PageProps> = ({
@@ -24,6 +26,8 @@ const FullComponent: React.FC<PageProps> = ({
   library,
   code,
   filename,
+  cli,
+  child,
 }) => {
   return (
     <div className="md:px-20 px-4">
@@ -65,16 +69,12 @@ const FullComponent: React.FC<PageProps> = ({
               <div className="w-full">
                 <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded-md overflow-x-auto">
                   <Snippet color="default" symbol={<FaTerminal />}>
-                    npx shadcn@latest add accordion
+                    {cli}
                   </Snippet>
                 </div>
               </div>
             }
-            tab2Content={
-              <div>
-                <P2 Lib={library} />
-              </div>
-            }
+            tab2Content={<div>{child}</div>}
           />
         </div>
       </div>

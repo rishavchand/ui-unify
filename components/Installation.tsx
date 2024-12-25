@@ -29,7 +29,7 @@ export function Installation({ tab1Content, tab2Content }: TabsProps) {
         <TabsContent className=" max-h-96 overflow-auto" value="cli">
           {tab1Content}
         </TabsContent>
-        <TabsContent className="p-2 max-h-96 overflow-auto" value="manual">
+        <TabsContent className="p-2  overflow-auto" value="manual">
           {tab2Content}
         </TabsContent>
       </div>
