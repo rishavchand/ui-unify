@@ -37,8 +37,8 @@ export const components = [
         Link: '/components/Badge',
       },
       {
-        label: 'Button Group',
-        Link: '/components/ButtonGroup',
+        label: 'Breadcrumb',
+        Link: '/components/Breadcrumb',
       },
       {
         label: 'Card',
