@@ -7,6 +7,8 @@ import React from 'react';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { AccordionDemo } from '@/app/(components)/components/preview/AccordianDemo';
 import { Installation } from './Installation';
+import { Snippet } from '@nextui-org/snippet';
+import { FaTerminal } from 'react-icons/fa';
 
 interface PageProps {
   heading: string;
@@ -52,24 +54,31 @@ const FullComponent: React.FC<PageProps> = ({
       </div>
       <div>
         <div>
-          <h1 className='sm:text-2xl sm:mt-10 mt-4 text-lg font-bold '>Installation</h1>
-          <p className='mt-2 border border-b-0 dark:border-gray-700 border-gray-300'></p>
+          <h1 className="sm:text-2xl sm:mt-10 mt-4 text-lg font-bold ">
+            Installation
+          </h1>
+          <p className="mt-2 border border-b-0 dark:border-gray-700 border-gray-300"></p>
         </div>
-        <div className='mt-4'>
-            <Installation 
+        <div className="mt-4">
+          <Installation
             tab1Content={
+              <div className="w-full">
+                <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded-md overflow-x-auto">
+                  <Snippet color="default" symbol={<FaTerminal />}>
+                    npx shadcn@latest add accordion
+                  </Snippet>
+                </div>
+              </div>
+            }
+            tab2Content={
               <div>
                 <P2 Lib={library} />
               </div>
             }
-            tab2Content={
-                <div>
-                    <P2 Lib={library} />
-                </div>
-                }
-            />
+          />
         </div>
       </div>
+      <div></div>
     </div>
   );
 };
