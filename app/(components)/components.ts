@@ -85,9 +85,9 @@ export const components = [
         Link: '/components/HoverCard',
       },
       {
-        label: 'Icon',
-        Link: '/components/Icon',
-      }
+        label: 'Input',
+        Link: '/components/Input',
+      },
     ],
   },
 ];
