@@ -1,6 +1,6 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { PaginationDemo } from '../preview/PaginationDemo';
+import { TableDemo } from '../preview/TableDemo';
 
 export default function page() {
   return (
@@ -99,7 +99,7 @@ export function TableDemo() {
         library="Shadcn/ui"
         filename="Table.tsx"
         cli={`npx shadcn@latest add table`}
-        Tab1={<PaginationDemo />}
+        Tab1={<TableDemo />}
         child={
           <>
             <div>
@@ -112,7 +112,7 @@ export function TableDemo() {
               <div>
                 <div className="overflow-x-auto mt-2 h-96">
                   <CodeBlockDemo
-                  code = {`import * as React from "react"
+                    code={`import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -230,8 +230,8 @@ export {
   TableCaption,
 }
 `}
-filename='table.tsx'
-                    />
+                    filename="table.tsx"
+                  />
                 </div>
               </div>
               <div className="flex gap-2 mt-4">

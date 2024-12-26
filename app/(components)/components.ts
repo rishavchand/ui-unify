@@ -105,8 +105,8 @@ export const components = [
         Link: '/components/Pagination',
       },
       {
-        label: 'Popover',
-        Link: '/components/Popover',
+        label: 'Table',
+        Link: '/components/Table',
       },
       {
         label: 'Progress',
