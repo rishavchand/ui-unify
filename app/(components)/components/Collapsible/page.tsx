@@ -8,58 +8,29 @@ export default function page() {
   return (
     <div>
       <FullComponent
-        heading="Checkbox"
+        heading="Collapsible"
         code={`"use client"
 
-import * as React from "react"
-import { ChevronsUpDown } from "lucide-react"
+import { Checkbox } from "@/components/ui/checkbox"
 
-import { Button } from "@/components/ui/button"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-
-export function CollapsibleDemo() {
-  const [isOpen, setIsOpen] = React.useState(false)
-
+export function CheckboxDemo() {
   return (
-    <Collapsible
-      open={isOpen}
-      onOpenChange={setIsOpen}
-      className="w-[350px] space-y-2"
-    >
-      <div className="flex items-center justify-between space-x-4 px-4">
-        <h4 className="text-sm font-semibold">
-          @peduarte starred 3 repositories
-        </h4>
-        <CollapsibleTrigger asChild>
-          <Button variant="ghost" size="sm" className="w-9 p-0">
-            <ChevronsUpDown className="h-4 w-4" />
-            <span className="sr-only">Toggle</span>
-          </Button>
-        </CollapsibleTrigger>
-      </div>
-      <div className="rounded-md border px-4 py-3 font-mono text-sm">
-        @radix-ui/primitives
-      </div>
-      <CollapsibleContent className="space-y-2">
-        <div className="rounded-md border px-4 py-3 font-mono text-sm">
-          @radix-ui/colors
-        </div>
-        <div className="rounded-md border px-4 py-3 font-mono text-sm">
-          @stitches/react
-        </div>
-      </CollapsibleContent>
-    </Collapsible>
+    <div className="flex items-center space-x-2">
+      <Checkbox id="terms" />
+      <label
+        htmlFor="terms"
+        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        Accept terms and conditions
+      </label>
+    </div>
   )
 }
 `}
-        description="An interactive component which expands/collapses a panel."
+        description="A control that allows the user to toggle between checked and not checked."
         library="Shadcn/ui"
         filename="Checkbox.tsx"
-        cli={`npx shadcn@latest add collapsible`}
+        cli={`npx shadcn@latest add checkbox`}
         Tab1={<CheckboxDemo />}
         child={
           <>
@@ -73,7 +44,7 @@ export function CollapsibleDemo() {
               <div>
                 <div className="bg-gray-100 dark:bg-zinc-800 p-3 rounded-md overflow-x-auto mt-2">
                   <Snippet symbol={<FaTerminal />}>
-                    <span>npm install @radix-ui/react-collapsible</span>
+                    <span>npm install @radix-ui/react-checkbox</span>
                   </Snippet>
                 </div>
               </div>
@@ -88,20 +59,39 @@ export function CollapsibleDemo() {
               <div>
                 <div className="overflow-x-auto mt-2 h-96">
                   <CodeBlockDemo
-                  code = {`"use client"
+                    code={`"use client"
 
-import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
+import * as React from "react"
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+import { Check } from "lucide-react"
 
-const Collapsible = CollapsiblePrimitive.Root
+import { cn } from "@/lib/utils"
 
-const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+    ref={ref}
+    className={cn(
+      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+      className
+    )}
+    {...props}
+  >
+    <CheckboxPrimitive.Indicator
+      className={cn("flex items-center justify-center text-current")}
+    >
+      <Check className="h-4 w-4" />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+))
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
-const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
-
-export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+export { Checkbox }
 `}
-filename='Collapsible.tsx'
-                   />
+                    filename="Checkbox.tsx"
+                  />
                 </div>
               </div>
               <div className="flex gap-2 mt-4">
