@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { DialogDemo } from '../preview/DialogDemo';
+import { DrawerDemo } from '../preview/DrawerDemo';
+
 
 export default function page() {
   return (
@@ -150,7 +151,7 @@ export function DrawerDemo() {
         library="Shadcn/ui"
         filename="Drawer.tsx"
         cli={`npx shadcn@latest add drawer`}
-        Tab1={<DialogDemo />}
+        Tab1={<DrawerDemo />}
         child={
           <>
             <div>
