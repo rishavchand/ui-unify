@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { LabelDemo } from '../preview/LabelDemo';
+import { MenubarDemo } from '../preview/MenubarDemo';
+
 
 export default function page() {
   return (
@@ -122,7 +123,7 @@ export function MenubarDemo() {
         filename="MenuBar.tsx"
         cli={`npx shadcn@latest add menubar
 `}
-        Tab1={<LabelDemo />}
+        Tab1={<MenubarDemo />}
         child={
           <>
             <div>
