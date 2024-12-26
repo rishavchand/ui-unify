@@ -89,13 +89,57 @@ export const components = [
         Link: '/components/Input',
       },
       {
-        label : 'Label',
+        label: 'Label',
         Link: '/components/Label',
       },
       {
-        label : 'Menubar',
+        label: 'Menubar',
         Link: '/components/Menubar',
-      }
+      },
+      {
+        label: 'Navigation Menu',
+        Link: '/components/NavigationMenu',
+      },
+      {
+        label: 'Pagination',
+        Link: '/components/Pagination',
+      },
+      {
+        label: 'Popover',
+        Link: '/components/Popover',
+      },
+      {
+        label: 'Progress',
+        Link: '/components/Progress',
+      },
+      {
+        label: 'Radio',
+        Link: '/components/Radio',
+      },
+      {
+        label: 'Select',
+        Link: '/components/Select',
+      },
+      {
+        label: 'Slider',
+        Link: '/components/Slider',
+      },
+      {
+        label: 'Switch',
+        Link: '/components/Switch',
+      },
+      {
+        label: 'Tabs',
+        Link: '/components/Tabs',
+      },
+      {
+        label: 'Tag',
+        Link: '/components/Tag',
+      },
+      {
+        label: 'Tooltip',
+        Link: '/components/Tooltip',
+      },
     ],
   },
 ];
