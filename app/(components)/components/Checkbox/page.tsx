@@ -30,7 +30,7 @@ export function CheckboxDemo() {
         description="A control that allows the user to toggle between checked and not checked."
         library="Shadcn/ui"
         filename="Checkbox.tsx"
-        cli={`npx shadcn@latest add carousel`}
+        cli={`npx shadcn@latest add checkbox`}
         Tab1={<CarouselDemo/>}
         child={
           <>
