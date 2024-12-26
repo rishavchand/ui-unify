@@ -3,6 +3,7 @@ import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
 import { CollapsibleDemo } from '../preview/CollapsibleDemo';
+import { CommandDemo } from '../preview/CommandDemo';
 
 export default function page() {
   return (
@@ -76,7 +77,7 @@ export function CommandDemo() {
         library="Shadcn/ui"
         filename="Command.tsx"
         cli={`npx shadcn@latest add command`}
-        Tab1={<CollapsibleDemo />}
+        Tab1={<CommandDemo/>}
         child={
           <>
             <div>
