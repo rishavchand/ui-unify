@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { MenubarDemo } from '../preview/MenubarDemo';
+import { NavigationMenuDemo } from '../preview/NavigationMenuDemo';
 
 export default function page() {
   return (
@@ -160,7 +160,7 @@ ListItem.displayName = "ListItem"
         library="Shadcn/ui"
         filename="Navigation Menu.tsx"
         cli={`npx shadcn@latest add navigation-menu`}
-        Tab1={<MenubarDemo />}
+        Tab1={<NavigationMenuDemo />}
         child={
           <>
             <div>
