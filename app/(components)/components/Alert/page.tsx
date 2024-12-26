@@ -106,6 +106,7 @@ AlertDescription.displayName = "AlertDescription"
 
 export { Alert, AlertTitle, AlertDescription }
 `}
+filename='alert.tsx'
                   />
                 </div>
               </div>

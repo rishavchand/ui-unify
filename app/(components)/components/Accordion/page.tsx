@@ -135,6 +135,8 @@ AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 `}
+filename='accordion.tsx'
+highlightLines={[]}
                   />
                 </div>
               </div>

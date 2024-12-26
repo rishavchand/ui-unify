@@ -67,6 +67,7 @@ function Badge({ className, variant, ...props }: BadgeProps) {
 
 export { Badge, badgeVariants }
 `}
+filename='Badge.tsx'
                   />
                 </div>
               </div>
