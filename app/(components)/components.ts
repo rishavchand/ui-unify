@@ -53,8 +53,8 @@ export const components = [
         Link: '/components/Carousel',
       },
       {
-        label: 'Dropdown',
-        Link: '/components/Dropdown',
+        label: 'Checkbox',
+        Link: '/components/Checkbox',
       },
       {
         label: 'Empty',
