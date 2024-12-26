@@ -178,7 +178,7 @@ export function DrawerDemo() {
               <div>
                 <div className="overflow-x-auto mt-2 h-96">
                   <CodeBlockDemo
-                  code = {`"use client"
+                    code={`"use client"
 
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
@@ -297,8 +297,8 @@ export {
   DrawerDescription,
 }
 `}
-filename='Drawer.tsx'
-                    />
+                    filename="Drawer.tsx"
+                  />
                 </div>
               </div>
               <div className="flex gap-2 mt-4">
