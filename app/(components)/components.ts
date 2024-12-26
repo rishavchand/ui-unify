@@ -77,8 +77,8 @@ export const components = [
         Link: '/components/Drawer',
       },
       {
-        label: 'Input',
-        Link: '/components/Input',
+        label: 'Dropdown Menu',
+        Link: '/components/Dropdown',
       },
       {
         label: 'Input Number',

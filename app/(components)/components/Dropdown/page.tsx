@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { DrawerDemo } from '../preview/DrawerDemo';
+import { DropdownMenuDemo } from '../preview/DropdownDemo';
 
 export default function page() {
   return (
@@ -137,7 +137,7 @@ export function DropdownMenuDemo() {
         filename="DropDownMenu.tsx"
         cli={`npx shadcn@latest add dropdown-menu
 `}
-        Tab1={<DrawerDemo />}
+        Tab1={<DropdownMenuDemo />}
         child={
           <>
             <div>
