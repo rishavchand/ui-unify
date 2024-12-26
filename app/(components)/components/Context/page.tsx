@@ -4,7 +4,6 @@ import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
 import { ContextMenuDemo } from '../preview/ContextMenuDemo';
 
-
 export default function page() {
   return (
     <div>
@@ -311,8 +310,8 @@ export {
   ContextMenuRadioGroup,
 }
 `}
-filename='ContextMenu.tsx'
-/>
+                    filename="ContextMenu.tsx"
+                  />
                 </div>
               </div>
               <div className="flex gap-2 mt-4">
