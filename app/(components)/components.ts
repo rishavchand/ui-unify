@@ -84,6 +84,10 @@ export const components = [
         label: 'Hover Card',
         Link: '/components/HoverCard',
       },
+      {
+        label: 'Icon',
+        Link: '/components/Icon',
+      }
     ],
   },
 ];
