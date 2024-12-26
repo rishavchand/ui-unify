@@ -65,8 +65,8 @@ export const components = [
         Link: '/components/Command',
       },
       {
-        label: 'Form Item',
-        Link: '/components/FormItem',
+        label: 'Context Menu',
+        Link: '/components/Context',
       },
       {
         label: 'Grid',

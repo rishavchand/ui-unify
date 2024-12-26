@@ -2,7 +2,6 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { CollapsibleDemo } from '../preview/CollapsibleDemo';
 import { CommandDemo } from '../preview/CommandDemo';
 
 export default function page() {

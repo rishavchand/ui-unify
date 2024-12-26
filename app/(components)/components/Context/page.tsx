@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { CollapsibleDemo } from '../preview/CollapsibleDemo';
+import { ContextMenuDemo } from '../preview/ContextMenuDemo';
+
 
 export default function page() {
   return (
@@ -81,7 +82,7 @@ export function ContextMenuDemo() {
         library="Shadcn/ui"
         filename="Checkbox.tsx"
         cli={`npx shadcn@latest add context-menu`}
-        Tab1={<CollapsibleDemo />}
+        Tab1={<ContextMenuDemo />}
         child={
           <>
             <div>
