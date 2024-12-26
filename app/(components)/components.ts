@@ -61,8 +61,8 @@ export const components = [
         Link: '/components/Collapsible',
       },
       {
-        label: 'Form',
-        Link: '/components/Form',
+        label: 'Command',
+        Link: '/components/Command',
       },
       {
         label: 'Form Item',
