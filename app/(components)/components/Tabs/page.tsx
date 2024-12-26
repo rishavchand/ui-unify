@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { HoverCardDemo } from '../preview/HoverCardDemo';
+import { TabsDemo } from '../preview/TabsDemo';
 
 export default function page() {
   return (
@@ -88,7 +88,7 @@ export function TabsDemo() {
         library="Shadcn/ui"
         filename="Tabs.tsx"
         cli={`npx shadcn@latest add tabs`}
-        Tab1={<HoverCardDemo />}
+        Tab1={<TabsDemo/>}
         child={
           <>
             <div>

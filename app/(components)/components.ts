@@ -109,8 +109,8 @@ export const components = [
         Link: '/components/Table',
       },
       {
-        label: 'Progress',
-        Link: '/components/Progress',
+        label: 'Tabs',
+        Link: '/components/Tabs',
       },
       {
         label: 'Radio',
@@ -127,10 +127,6 @@ export const components = [
       {
         label: 'Switch',
         Link: '/components/Switch',
-      },
-      {
-        label: 'Tabs',
-        Link: '/components/Tabs',
       },
       {
         label: 'Tag',
