@@ -69,8 +69,8 @@ export const components = [
         Link: '/components/Context',
       },
       {
-        label: 'Grid',
-        Link: '/components/Grid',
+        label: 'Dialog',
+        Link: '/components/Dialog',
       },
       {
         label: 'Icon',

@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { ContextMenuDemo } from '../preview/ContextMenuDemo';
+import { DialogDemo } from '../preview/DialogDemo';
 
 export default function page() {
   return (
@@ -69,7 +69,7 @@ export function DialogDemo() {
         library="Shadcn/ui"
         filename="Dialog.tsx"
         cli={`npx shadcn@latest add dialog`}
-        Tab1={<ContextMenuDemo />}
+        Tab1={<DialogDemo />}
         child={
           <>
             <div>
