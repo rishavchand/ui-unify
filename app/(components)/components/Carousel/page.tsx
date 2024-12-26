@@ -2,6 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
+import { CarouselDemo } from '../preview/CarouselDemo';
 
 export default function page() {
   return (
@@ -45,7 +46,7 @@ export function CarouselDemo() {
         library="Shadcn/ui"
         filename="Avatar.tsx"
         cli={`npx shadcn@latest add carousel`}
-        Tab1={}
+        Tab1={<CarouselDemo/>}
         child={
           <>
             <div>
