@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { DropdownMenuDemo } from '../preview/DropdownDemo';
+import { LabelDemo } from '../preview/LabelDemo';
+
 
 export default function page() {
   return (
@@ -28,7 +29,7 @@ export function LabelDemo() {
         filename="Label.tsx"
         cli={`npx shadcn@latest add label
 `}
-        Tab1={<DropdownMenuDemo />}
+        Tab1={<LabelDemo />}
         child={
           <>
             <div>
