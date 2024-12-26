@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { DrawerDemo } from '../preview/DrawerDemo';
+import { HoverCardDemo } from '../preview/HoverCardDemo';
+
 
 export default function page() {
   return (
@@ -57,7 +58,7 @@ export function HoverCardDemo() {
         library="Shadcn/ui"
         filename="HoverCard.tsx"
         cli={`npx shadcn@latest add hover-card`}
-        Tab1={<DrawerDemo />}
+        Tab1={<HoverCardDemo/>}
         child={
           <>
             <div>

@@ -81,8 +81,8 @@ export const components = [
         Link: '/components/Dropdown',
       },
       {
-        label: 'Input Number',
-        Link: '/components/InputNumber',
+        label: 'Hover Card',
+        Link: '/components/HoverCard',
       },
     ],
   },
