@@ -49,8 +49,8 @@ export const components = [
         Link: '/components/Card',
       },
       {
-        label: 'Collapse',
-        Link: '/components/Collapse',
+        label: 'Carousel',
+        Link: '/components/Carousel',
       },
       {
         label: 'Dropdown',
