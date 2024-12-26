@@ -8,43 +8,28 @@ export default function page() {
   return (
     <div>
       <FullComponent
-        heading="Carousel"
-        code={`import * as React from "react"
+        heading="Checkbox"
+        code={`"use client"
 
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import { Checkbox } from "@/components/ui/checkbox"
 
-export function CarouselDemo() {
+export function CheckboxDemo() {
   return (
-    <Carousel className="w-full max-w-xs">
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <div className="flex items-center space-x-2">
+      <Checkbox id="terms" />
+      <label
+        htmlFor="terms"
+        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        Accept terms and conditions
+      </label>
+    </div>
   )
 }
 `}
-        description="A carousel with motion and swipe built using Embla."
+        description="A control that allows the user to toggle between checked and not checked."
         library="Shadcn/ui"
-        filename="Carousel.tsx"
+        filename="Checkbox.tsx"
         cli={`npx shadcn@latest add carousel`}
         Tab1={<CarouselDemo/>}
         child={
@@ -337,8 +322,6 @@ export {
   CarouselNext,
 }
 `}
-filename='Carousel.tsx'
-
                    />
                 </div>
               </div>
