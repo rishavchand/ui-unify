@@ -73,8 +73,8 @@ export const components = [
         Link: '/components/Dialog',
       },
       {
-        label: 'Icon',
-        Link: '/components/Icon',
+        label: 'Drawer',
+        Link: '/components/Drawer',
       },
       {
         label: 'Input',
