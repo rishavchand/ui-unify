@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { CarouselDemo } from '../preview/CarouselDemo';
+import { CheckboxDemo } from '../preview/CheckboxDemo';
 
 export default function page() {
   return (
@@ -31,7 +31,7 @@ export function CheckboxDemo() {
         library="Shadcn/ui"
         filename="Checkbox.tsx"
         cli={`npx shadcn@latest add checkbox`}
-        Tab1={<CarouselDemo />}
+        Tab1={<CheckboxDemo />}
         child={
           <>
             <div>
@@ -59,7 +59,7 @@ export function CheckboxDemo() {
               <div>
                 <div className="overflow-x-auto mt-2 h-96">
                   <CodeBlockDemo
-                  code={`"use client"
+                    code={`"use client"
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -90,7 +90,7 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
 export { Checkbox }
 `}
-filename='Checkbox.tsx'
+                    filename="Checkbox.tsx"
                   />
                 </div>
               </div>
