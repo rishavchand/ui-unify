@@ -91,6 +91,10 @@ export const components = [
       {
         label : 'Label',
         Link: '/components/Label',
+      },
+      {
+        label : 'Menubar',
+        Link: '/components/Menubar',
       }
     ],
   },
