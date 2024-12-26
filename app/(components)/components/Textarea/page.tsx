@@ -1,6 +1,6 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { PaginationDemo } from '../preview/PaginationDemo';
+import { TextareaDemo } from '../preview/TextareaDemo';
 
 export default function page() {
   return (
@@ -17,7 +17,7 @@ export function TextareaDemo() {
         library="Shadcn/ui"
         filename="Textarea.tsx"
         cli={`npx shadcn@latest add textarea`}
-        Tab1={<PaginationDemo />}
+        Tab1={<TextareaDemo />}
         child={
           <>
             <div>

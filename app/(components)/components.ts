@@ -113,8 +113,8 @@ export const components = [
         Link: '/components/Tabs',
       },
       {
-        label: 'Radio',
-        Link: '/components/Radio',
+        label: 'Textarea',
+        Link: '/components/Textarea',
       },
       {
         label: 'Select',
