@@ -1,6 +1,7 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { BadgeDemo } from '../preview/BadgeDemo';
+import { PaginationDemo } from '../preview/PaginationDemo';
+
 
 export default function page() {
   return (
@@ -50,7 +51,7 @@ export function PaginationDemo() {
         library="Shadcn/ui"
         filename="Pagination.tsx"
         cli={`npx shadcn@latest add pagination`}
-        Tab1={<BadgeDemo />}
+        Tab1={<PaginationDemo />}
         child={
           <>
             <div>
