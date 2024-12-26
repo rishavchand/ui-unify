@@ -57,8 +57,8 @@ export const components = [
         Link: '/components/Checkbox',
       },
       {
-        label: 'Empty',
-        Link: '/components/Empty',
+        label: 'Collapsible',
+        Link: '/components/Collapsible',
       },
       {
         label: 'Form',

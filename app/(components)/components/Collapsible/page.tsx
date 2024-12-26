@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { CheckboxDemo } from '../preview/CheckboxDemo';
+import { CollapsibleDemo } from '../preview/CollapsibleDemo';
 
 export default function page() {
   return (
@@ -31,7 +31,7 @@ export function CheckboxDemo() {
         library="Shadcn/ui"
         filename="Checkbox.tsx"
         cli={`npx shadcn@latest add checkbox`}
-        Tab1={<CheckboxDemo />}
+        Tab1={<CollapsibleDemo />}
         child={
           <>
             <div>
