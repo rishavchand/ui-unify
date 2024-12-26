@@ -1,6 +1,6 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { BadgeDemo } from '../preview/BadgeDemo';
+import { Input } from '@/components/ui/input';
 
 export default function page() {
   return (
@@ -17,7 +17,7 @@ export function InputDemo() {
         library="Shadcn/ui"
         filename="Input.tsx"
         cli={`npx shadcn@latest add badge`}
-        Tab1={<BadgeDemo />}
+        Tab1={<Input />}
         child={
           <>
             <div>
