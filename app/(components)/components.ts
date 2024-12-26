@@ -88,6 +88,10 @@ export const components = [
         label: 'Input',
         Link: '/components/Input',
       },
+      {
+        label : 'Label',
+        Link: '/components/Label',
+      }
     ],
   },
 ];
