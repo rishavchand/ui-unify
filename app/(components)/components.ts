@@ -29,6 +29,10 @@ export const components = [
         Link: '/components/3dPin',
       },
       {
+        label : 'Aurora Background',
+        Link : '/components/AuroraBackground'
+      },
+      {
         label: 'Accordion',
         Link: '/components/Accordion',
       },
