@@ -1,7 +1,6 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { DockDemo } from '../preview/DockDemo';
-
+import { AnimatedCircularProgressBarDemo } from '../preview/AnimatedCircularProgressBarDemo';
 
 export default function page() {
   return (
@@ -9,7 +8,7 @@ export default function page() {
       <FullComponent
         heading="Animated Circular Progress Bar"
         description="Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value."
-        code = {`"use client";
+        code={`"use client";
 
 import { useEffect, useState } from "react";
 
@@ -44,7 +43,7 @@ export function AnimatedCircularProgressBarDemo() {
         library="Magic UI"
         filename="AnimatedCircularProgressBar.tsx"
         cli={`npx shadcn@latest add "https://magicui.design/r/animated-circular-progress-bar"`}
-        Tab1={<DockDemo />}
+        Tab1={<AnimatedCircularProgressBarDemo />}
         child={
           <>
             <div>
@@ -57,7 +56,7 @@ export function AnimatedCircularProgressBarDemo() {
               <div>
                 <div className="overflow-x-auto mt-2 h-96">
                   <CodeBlockDemo
-                  code = {`import { cn } from "@/lib/utils";
+                    code={`import { cn } from "@/lib/utils";
 
 interface Props {
   max: number;
@@ -166,8 +165,8 @@ export function AnimatedCircularProgressBar({
   );
 }
 `}
-                  filename='AnimatedCircularProgressBar.tsx'
-                   />
+                    filename="AnimatedCircularProgressBar.tsx"
+                  />
                 </div>
               </div>
               <div className="flex gap-2 mt-4">
