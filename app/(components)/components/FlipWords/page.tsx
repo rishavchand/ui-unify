@@ -177,6 +177,7 @@ export const FlipWords = ({
   );
 };
 `}
+                    filename="FlipWords.tsx"
                   />
                 </div>
               </div>
