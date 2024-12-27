@@ -1,3 +1,4 @@
+"use client"
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
@@ -222,6 +223,7 @@ export const CardDescription = ({
   );
 };
 `}
+filename='CardHoverEffect.tsx'
                   />
                 </div>
               </div>
