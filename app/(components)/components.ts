@@ -29,8 +29,8 @@ export const components = [
         Link: '/components/3dPin',
       },
       {
-        label : 'Aurora Background',
-        Link : '/components/AuroraBackground'
+        label: 'Aurora Background',
+        Link: '/components/AuroraBackground',
       },
       {
         label: 'Accordion',
@@ -53,12 +53,12 @@ export const components = [
         Link: '/components/Breadcrumb',
       },
       {
-        label : 'Card Hover Effect',
-        Link : '/components/CardHoverEffect'
+        label: 'Card Hover Effect',
+        Link: '/components/CardHoverEffect',
       },
       {
         label: 'Card Stack',
-        Link: '/components/CardStack'
+        Link: '/components/CardStack',
       },
       {
         label: 'Calendar',
@@ -101,16 +101,20 @@ export const components = [
         Link: '/components/Dropdown',
       },
       {
-        label : 'File Upload',
-        Link : '/components/FileUpload'
+        label: 'File Upload',
+        Link: '/components/FileUpload',
       },
       {
-        label : 'Flip Words',
-        Link : '/components/FlipWords'
+        label: 'Flip Words',
+        Link: '/components/FlipWords',
       },
       {
-        label : 'Glare Card',
-        Link : '/components/GlareCard'
+        label: 'Google Gemini Effect',
+        Link: '/components/GoogleGeminiEffect',
+      },
+      {
+        label: 'Glare Card',
+        Link: '/components/GlareCard',
       },
       {
         label: 'Hover Card',

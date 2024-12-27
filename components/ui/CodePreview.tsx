@@ -27,7 +27,7 @@ export function CodePreview({ tab1Content, tab2Content }: TabsProps) {
       </TabsList>
       <div className="mt-8 border max-h-full border-gray-300 dark:border-gray-700 rounded-lg ">
         <TabsContent
-          className="p-2 max-h-96 overflow-auto   "
+          className="p-2 max-h-96 overflow-auto w-full  "
           value="Preview"
         >
           {tab2Content}
