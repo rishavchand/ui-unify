@@ -133,6 +133,10 @@ export const components = [
         Link: '/components/Label',
       },
       {
+        label : 'Marquee',
+        Link : '/components/Marquee',
+      },
+      {
         label: 'Menubar',
         Link: '/components/Menubar',
       },
