@@ -4,45 +4,102 @@ import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
 import { AnimatedPinDemo } from '../preview/3dPinDemo';
 
-
 export default function page() {
   return (
     <div>
       <FullComponent
-        heading="3D Animated Pin"
-        description="A gradient pin that animates on hover, perfect for product links."
+        heading="Aurora Background"
+        description="A subtle Aurora or Southern Lights background for your website."
         code={`"use client";
-import React from "react";
-import { PinContainer } from "../ui/3d-pin";
 
-export function AnimatedPinDemo() {
+import { motion } from "framer-motion";
+import React from "react";
+import { AuroraBackground } from "../ui/aurora-background";
+
+export function AuroraBackgroundDemo() {
   return (
-    <div className="h-[40rem] w-full flex items-center justify-center ">
-      <PinContainer
-        title="/ui.aceternity.com"
-        href="https://twitter.com/pankajkumar_dev"
+    <AuroraBackground>
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            UÍ-Unify
-          </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
-              Customizable Tailwind CSS and Framer Motion Components.
-            </span>
-          </div>
-          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+        <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
+          Background lights are cool you know.
         </div>
-      </PinContainer>
-    </div>
+        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
+          And this, is chemical burn.
+        </div>
+        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
+          Debug now
+        </button>
+      </motion.div>
+    </AuroraBackground>
   );
 }
 `}
         library="Aceternity UI"
-        filename="3DPin.tsx"
-        cli={`npx shadcn@latest add https://ui.aceternity.com/registry/3d-pin.json
-`}
+        filename="AuroraBackground.tsx"
+        cli={`npx shadcn@latest add https://ui.aceternity.com/registry/aurora-background.json`}
         Tab1={<AnimatedPinDemo />}
+        tab1Extra = {<>
+        <div className='mt-4'>Modify the config file to add animation and colors as variables</div>
+        <div className=''>
+            <CodeBlockDemo 
+            code= {`const {
+    default: flattenColorPalette,
+  } = require("tailwindcss/lib/util/flattenColorPalette");
+  
+  /** @type {import('tailwindcss').Config} */
+  module.exports = {
+    content: [
+      // your paths
+      "./src/**/*.{ts,tsx}",
+    ],
+    darkMode: "class",
+    theme: {
+      extend: {
+        animation: {
+          aurora: "aurora 60s linear infinite",
+        },
+        keyframes: {
+          aurora: {
+            from: {
+              backgroundPosition: "50% 50%, 50% 50%",
+            },
+            to: {
+              backgroundPosition: "350% 50%, 350% 50%",
+            },
+          },
+        },
+      },
+    },
+    plugins: [addVariablesForColors],
+  };
+  
+  // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+  function addVariablesForColors({ addBase, theme }: any) {
+    let allColors = flattenColorPalette(theme("colors"));
+    let newVars = Object.fromEntries(
+      Object.entries(allColors).map(([key, val]) => [\`--\${key}\`, val])
+    );
+  
+    addBase({
+      ":root": newVars,
+    });
+  }
+  `}
+  filename='AuroraBackground.tsx'
+  highlightLines={[1,2,3,15,18,19,20,21,22,23,24,25,29,33,34,35,36,37,38,39,40,41,42]}
+
+            />
+        </div>
+        </>}
         child={
           <>
             <div>
@@ -90,7 +147,7 @@ export function cn(...inputs: ClassValue[]) {
               <div>
                 <div className="overflow-x-auto mt-2 h-96">
                   <CodeBlockDemo
-                  code={`"use client";
+                    code={`"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -257,7 +314,7 @@ export const PinPerspective = ({
   );
 };
 `}
-                  filename='3DPin.tsx'
+                    filename="3DPin.tsx"
                   />
                 </div>
               </div>
