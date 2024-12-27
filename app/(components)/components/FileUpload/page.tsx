@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { AnimatedPinDemo } from '../preview/3dPinDemo';
+import { FileUploadDemo } from '../preview/FileUploadDemo';
+
 
 export default function page() {
   return (
@@ -32,7 +33,7 @@ export function FileUploadDemo() {
         filename="FileUpload.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/file-upload.json
 `}
-        Tab1={<AnimatedPinDemo />}
+        Tab1={<FileUploadDemo />}
         child={
           <>
             <div>
