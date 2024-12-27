@@ -18,6 +18,7 @@ interface PageProps {
   cli: string;
   child?: React.ReactNode;
   Tab1? : React.ReactNode;
+  tab1Extra?: React.ReactNode;
 }
 
 const FullComponent: React.FC<PageProps> = ({
@@ -28,7 +29,8 @@ const FullComponent: React.FC<PageProps> = ({
   filename,
   cli,
   child,
-  Tab1
+  Tab1,
+  tab1Extra
 }) => {
   return (
     <div className="md:px-20 px-4">
@@ -72,6 +74,9 @@ const FullComponent: React.FC<PageProps> = ({
                   <Snippet color="default" symbol={<FaTerminal />}>
                     {cli}
                   </Snippet>
+                </div>
+                <div>
+                  {tab1Extra}
                 </div>
               </div>
             }
