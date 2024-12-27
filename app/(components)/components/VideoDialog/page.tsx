@@ -1,6 +1,7 @@
 import FullComponent from '@/components/FullComponent';
-import { MarqueeDemo } from '@/components/Marque';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
+import { HeroVideoDialogDemo } from '../preview/HeroVideoDialogDemo';
+
 
 export default function page() {
   return (
@@ -34,7 +35,7 @@ export function HeroVideoDialogDemo() {
         library="Magic UI"
         filename="HeroVideoDialog.tsx"
         cli={`npx shadcn@latest add "https://magicui.design/r/hero-video-dialog"`}
-        Tab1={<MarqueeDemo />}
+        Tab1={<HeroVideoDialogDemo />}
         child={
           <>
             <div>
@@ -189,6 +190,7 @@ export function HeroVideoDialog({
   );
 }
 `}
+filename='HeroVideoDialog.tsx'
                   />
                 </div>
               </div>

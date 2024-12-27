@@ -117,6 +117,10 @@ export const components = [
         Link: '/components/GlareCard',
       },
       {
+        label : 'Hero Video Dialog',
+        Link: '/components/VideoDialog',
+      },
+      {
         label : 'Hover Border Gradient',
         Link: '/components/HoverBorderGradient',
       },
