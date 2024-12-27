@@ -44,7 +44,6 @@ const useTree = () => {
   return context;
 };
 
-
 type Direction = 'rtl' | 'ltr' | undefined;
 
 type TreeViewProps = {
@@ -62,7 +61,6 @@ type TreeViewProps = {
 const Tree = forwardRef<HTMLDivElement, TreeViewProps>(
   (
     {
-      className,
       elements,
       initialSelectedId,
       initialExpandedItems,
@@ -154,7 +152,7 @@ const Tree = forwardRef<HTMLDivElement, TreeViewProps>(
           direction,
         }}
       >
-        <div className={cn('size-full', className)}>
+        <div className={cn('size-full', props.className)}>
           <ScrollArea
             ref={ref}
             className="relative h-full px-2"
@@ -203,9 +201,7 @@ const TreeIndicator = forwardRef<
 
 TreeIndicator.displayName = 'TreeIndicator';
 
-interface FolderComponentProps
-  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> {}
-
+type FolderComponentProps = React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>;
 type FolderProps = {
   expandedItems?: string[];
   element: string;
@@ -227,7 +223,7 @@ const Folder = forwardRef<
       children,
       ...props
     },
-    _ref
+    ref
   ) => {
     const {
       direction,
@@ -298,7 +294,7 @@ const File = forwardRef<
   (
     {
       value,
-      className,
+      // className,
       // handleSelect,
       isSelectable = true,
       isSelect,
@@ -321,8 +317,7 @@ const File = forwardRef<
             'bg-muted': isSelected && isSelectable,
           },
           isSelectable ? 'cursor-pointer' : 'cursor-not-allowed opacity-50',
-          direction === 'rtl' ? 'rtl' : 'ltr',
-          className
+          direction === 'rtl' ? 'rtl' : 'ltr'
         )}
         onClick={() => selectItem(value)}
         {...props}
