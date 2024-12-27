@@ -29,12 +29,16 @@ export const components = [
         Link: '/components/3dPin',
       },
       {
-        label : 'Animated List',
-        Link : '/components/AnimatedList'
+        label: 'Animated List',
+        Link: '/components/AnimatedList',
       },
       {
         label: 'Aurora Background',
         Link: '/components/AuroraBackground',
+      },
+      {
+        label: 'Animated Circular Bar',
+        Link: '/components/AnimatedCircularProgressBar',
       },
       {
         label: 'Accordion',
@@ -49,8 +53,8 @@ export const components = [
         Link: '/components/Avatar',
       },
       {
-        label : "Bento Grid",
-        Link : "/components/BentoGrid"
+        label: 'Bento Grid',
+        Link: '/components/BentoGrid',
       },
       {
         label: 'Badge',
@@ -97,8 +101,8 @@ export const components = [
         Link: '/components/Context',
       },
       {
-        label : 'Dock',
-        Link : '/components/Dock'
+        label: 'Dock',
+        Link: '/components/Dock',
       },
       {
         label: 'Dialog',
@@ -129,11 +133,11 @@ export const components = [
         Link: '/components/GlareCard',
       },
       {
-        label : 'Hero Video Dialog',
+        label: 'Hero Video Dialog',
         Link: '/components/VideoDialog',
       },
       {
-        label : 'Hover Border Gradient',
+        label: 'Hover Border Gradient',
         Link: '/components/HoverBorderGradient',
       },
       {
@@ -149,8 +153,8 @@ export const components = [
         Link: '/components/Label',
       },
       {
-        label : 'Marquee',
-        Link : '/components/Marquee',
+        label: 'Marquee',
+        Link: '/components/Marquee',
       },
       {
         label: 'Menubar',
@@ -165,7 +169,7 @@ export const components = [
         Link: '/components/Pagination',
       },
       {
-        label : 'Text Reveal Card',
+        label: 'Text Reveal Card',
         Link: '/components/TextRevealCard',
       },
       {
