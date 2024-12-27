@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { NavigationMenuDemo } from '../preview/NavigationMenuDemo';
+import { ThreeDCardDemo } from '../preview/3dCardDemo';
 
 export default function page() {
   return (
@@ -69,7 +69,7 @@ export function ThreeDCardDemo() {
         library="Aceternity UI"
         filename="3DCardEffect.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/3d-card.json`}
-        Tab1={<NavigationMenuDemo />}
+        Tab1={<ThreeDCardDemo />}
         child={
           <>
             <div>
@@ -104,7 +104,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 `}
-filename='utils.ts'
+                    filename="utils.ts"
                   />
                 </div>
               </div>
