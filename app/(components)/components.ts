@@ -97,6 +97,10 @@ export const components = [
         Link: '/components/Context',
       },
       {
+        label : 'Dock',
+        Link : '/components/Dock'
+      },
+      {
         label: 'Dialog',
         Link: '/components/Dialog',
       },
