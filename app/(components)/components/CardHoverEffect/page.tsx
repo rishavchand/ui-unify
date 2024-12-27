@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { AnimatedPinDemo } from '../preview/3dPinDemo';
+import { CardHoverEffectDemo } from '../preview/CardHoverEffectDemo';
 
 export default function page() {
   return (
@@ -62,7 +62,7 @@ export const projects = [
         filename="CardHoverEffect.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/card-hover-effect.json
 `}
-        Tab1={<AnimatedPinDemo />}
+        Tab1={<CardHoverEffectDemo />}
         child={
           <>
             <div>
