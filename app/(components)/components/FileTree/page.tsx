@@ -527,6 +527,7 @@ CollapseButton.displayName = "CollapseButton";
 
 export { CollapseButton, File, Folder, Tree, type TreeViewElement };
 `}
+filename='FileTree.tsx'
                  />
                 </div>
               </div>
