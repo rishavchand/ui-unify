@@ -117,6 +117,10 @@ export const components = [
         Link: '/components/GlareCard',
       },
       {
+        label : 'Hover Border Gradient',
+        Link: '/components/HoverBorderGradient',
+      },
+      {
         label: 'Hover Card',
         Link: '/components/HoverCard',
       },
