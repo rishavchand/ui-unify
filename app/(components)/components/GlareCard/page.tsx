@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { FlipWordsDemo } from '../preview/FlipWordsDemo';
+import { GlareCardDemo } from '../preview/GlareCardDemo';
+
 
 export default function page() {
   return (
@@ -39,7 +40,7 @@ export function GlareCardDemo() {
         library="Aceternity UI"
         filename="Glare Cards.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/glare-card.json`}
-        Tab1={<FlipWordsDemo />}
+        Tab1={<GlareCardDemo />}
         child={
           <>
             <div>
