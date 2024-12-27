@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { HoverBorderGradientDemo } from '../preview/HoverBorderGradientDemo';
+import { TextRevealCardPreview } from '../preview/TextRevealCardDemo';
 
 export default function page() {
   return (
@@ -40,7 +40,7 @@ export function TextRevealCardPreview() {
         library="Aceternity UI"
         filename="TextRevealCard.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/text-reveal-card.json`}
-        Tab1={<HoverBorderGradientDemo />}
+        Tab1={<TextRevealCardPreview />}
         child={
           <>
             <div>
@@ -276,7 +276,7 @@ const Stars = () => {
 
 export const MemoizedStars = memo(Stars);
 `}
-filename='TextRevealCard.tsx'
+                    filename="TextRevealCard.tsx"
                   />
                 </div>
               </div>
