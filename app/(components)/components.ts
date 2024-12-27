@@ -53,6 +53,10 @@ export const components = [
         Link: '/components/Breadcrumb',
       },
       {
+        label : 'Card Hover Effect',
+        Link : '/components/CardHoverEffect'
+      },
+      {
         label: 'Calendar',
         Link: '/components/Calendar',
       },
