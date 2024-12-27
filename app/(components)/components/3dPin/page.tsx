@@ -89,136 +89,174 @@ export function cn(...inputs: ClassValue[]) {
               <div>
                 <div className="overflow-x-auto mt-2 h-96">
                   <CodeBlockDemo
-                    code={`import * as React from "react"
-import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
-import { cva } from "class-variance-authority"
-import { ChevronDown } from "lucide-react"
+                  code={`"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
+export const PinContainer = ({
+  children,
+  title,
+  href,
+  className,
+  containerClassName,
+}: {
+  children: React.ReactNode;
+  title?: string;
+  href?: string;
+  className?: string;
+  containerClassName?: string;
+}) => {
+  const [transform, setTransform] = useState(
+    "translate(-50%,-50%) rotateX(0deg)"
+  );
 
-const NavigationMenu = React.forwardRef<
-  React.ElementRef<typeof NavigationMenuPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
->(({ className, children, ...props }, ref) => (
-  <NavigationMenuPrimitive.Root
-    ref={ref}
-    className={cn(
-      "relative z-10 flex max-w-max flex-1 items-center justify-center",
-      className
-    )}
-    {...props}
-  >
-    {children}
-    <NavigationMenuViewport />
-  </NavigationMenuPrimitive.Root>
-))
-NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName
+  const onMouseEnter = () => {
+    setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+  };
+  const onMouseLeave = () => {
+    setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
+  };
 
-const NavigationMenuList = React.forwardRef<
-  React.ElementRef<typeof NavigationMenuPrimitive.List>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>
->(({ className, ...props }, ref) => (
-  <NavigationMenuPrimitive.List
-    ref={ref}
-    className={cn(
-      "group flex flex-1 list-none items-center justify-center space-x-1",
-      className
-    )}
-    {...props}
-  />
-))
-NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
-
-const NavigationMenuItem = NavigationMenuPrimitive.Item
-
-const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-)
-
-const NavigationMenuTrigger = React.forwardRef<
-  React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
-  <NavigationMenuPrimitive.Trigger
-    ref={ref}
-    className={cn(navigationMenuTriggerStyle(), "group", className)}
-    {...props}
-  >
-    {children}{" "}
-    <ChevronDown
-      className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
-      aria-hidden="true"
-    />
-  </NavigationMenuPrimitive.Trigger>
-))
-NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
-
-const NavigationMenuContent = React.forwardRef<
-  React.ElementRef<typeof NavigationMenuPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
->(({ className, ...props }, ref) => (
-  <NavigationMenuPrimitive.Content
-    ref={ref}
-    className={cn(
-      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
-      className
-    )}
-    {...props}
-  />
-))
-NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
-
-const NavigationMenuLink = NavigationMenuPrimitive.Link
-
-const NavigationMenuViewport = React.forwardRef<
-  React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
->(({ className, ...props }, ref) => (
-  <div className={cn("absolute left-0 top-full flex justify-center")}>
-    <NavigationMenuPrimitive.Viewport
+  return (
+    <Link
       className={cn(
-        "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
-        className
+        "relative group/pin z-50  cursor-pointer",
+        containerClassName
       )}
-      ref={ref}
-      {...props}
-    />
-  </div>
-))
-NavigationMenuViewport.displayName =
-  NavigationMenuPrimitive.Viewport.displayName
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      href={href || "/"}
+    >
+      <div
+        style={{
+          perspective: "1000px",
+          transform: "rotateX(70deg) translateZ(0deg)",
+        }}
+        className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
+      >
+        <div
+          style={{
+            transform: transform,
+          }}
+          className="absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+        >
+          <div className={cn(" relative z-50 ", className)}>{children}</div>
+        </div>
+      </div>
+      <PinPerspective title={title} href={href} />
+    </Link>
+  );
+};
 
-const NavigationMenuIndicator = React.forwardRef<
-  React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>
->(({ className, ...props }, ref) => (
-  <NavigationMenuPrimitive.Indicator
-    ref={ref}
-    className={cn(
-      "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
-      className
-    )}
-    {...props}
-  >
-    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" />
-  </NavigationMenuPrimitive.Indicator>
-))
-NavigationMenuIndicator.displayName =
-  NavigationMenuPrimitive.Indicator.displayName
+export const PinPerspective = ({
+  title,
+  href,
+}: {
+  title?: string;
+  href?: string;
+}) => {
+  return (
+    <motion.div className="pointer-events-none  w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+      <div className=" w-full h-full -mt-7 flex-none  inset-0">
+        <div className="absolute top-0 inset-x-0  flex justify-center">
+          <a
+            href={href}
+            target={"_blank"}
+            className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 "
+          >
+            <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
+              {title}
+            </span>
 
-export {
-  navigationMenuTriggerStyle,
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuContent,
-  NavigationMenuTrigger,
-  NavigationMenuLink,
-  NavigationMenuIndicator,
-  NavigationMenuViewport,
-}
+            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
+          </a>
+        </div>
+
+        <div
+          style={{
+            perspective: "1000px",
+            transform: "rotateX(70deg) translateZ(0)",
+          }}
+          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
+        >
+          <>
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0,
+                x: "-50%",
+                y: "-50%",
+              }}
+              animate={{
+                opacity: [0, 1, 0.5, 0],
+                scale: 1,
+
+                z: 0,
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                delay: 0,
+              }}
+              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+            ></motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0,
+                x: "-50%",
+                y: "-50%",
+              }}
+              animate={{
+                opacity: [0, 1, 0.5, 0],
+                scale: 1,
+
+                z: 0,
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                delay: 2,
+              }}
+              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+            ></motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0,
+                x: "-50%",
+                y: "-50%",
+              }}
+              animate={{
+                opacity: [0, 1, 0.5, 0],
+                scale: 1,
+
+                z: 0,
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                delay: 4,
+              }}
+              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+            ></motion.div>
+          </>
+        </div>
+
+        <>
+          <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-cyan-500 translate-y-[14px] w-px h-20 group-hover/pin:h-40 blur-[2px]" />
+          <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-cyan-500 translate-y-[14px] w-px h-20 group-hover/pin:h-40  " />
+          <motion.div className="absolute right-1/2 translate-x-[1.5px] bottom-1/2 bg-cyan-600 translate-y-[14px] w-[4px] h-[4px] rounded-full z-40 blur-[3px]" />
+          <motion.div className="absolute right-1/2 translate-x-[0.5px] bottom-1/2 bg-cyan-300 translate-y-[14px] w-[2px] h-[2px] rounded-full z-40 " />
+        </>
+      </div>
+    </motion.div>
+  );
+};
 `}
-                    filename="NavigationMenu.tsx"
+                  filename='3DPin.tsx'
                   />
                 </div>
               </div>
