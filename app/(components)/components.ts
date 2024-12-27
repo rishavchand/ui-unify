@@ -45,6 +45,10 @@ export const components = [
         Link: '/components/Avatar',
       },
       {
+        label : "Bento Grid",
+        Link : "/components/BentoGrid"
+      },
+      {
         label: 'Badge',
         Link: '/components/Badge',
       },
