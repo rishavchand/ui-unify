@@ -2,14 +2,13 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { FileTreeDemo } from '../preview/FileTreeDemo';
 
-
 export default function page() {
   return (
     <div>
       <FullComponent
         heading="File Tree"
         description="A component used to showcase the folder and file structure of a directory."
-        code = {`import { File, Folder, Tree } from "@/components/magicui/file-tree";
+        code={`import { File, Folder, Tree } from "@/components/magicui/file-tree";
 
 export function FileTreeDemo() {
   return (
@@ -137,7 +136,7 @@ const ELEMENTS = [
               <div>
                 <div className="overflow-x-auto mt-2 h-96">
                   <CodeBlockDemo
-                  code = {`"use client";
+                    code={`"use client";
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { FileIcon, FolderIcon, FolderOpenIcon } from "lucide-react";
@@ -527,8 +526,8 @@ CollapseButton.displayName = "CollapseButton";
 
 export { CollapseButton, File, Folder, Tree, type TreeViewElement };
 `}
-filename='FileTree.tsx'
-                 />
+                    filename="FileTree.tsx"
+                  />
                 </div>
               </div>
               <div className="flex gap-2 mt-4">

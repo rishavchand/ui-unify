@@ -125,8 +125,8 @@ export const components = [
         Link: '/components/FlipWords',
       },
       {
-        label : 'File Tree',
-        Link : '/components/FileTree'
+        label: 'File Tree',
+        Link: '/components/FileTree',
       },
       {
         label: 'Google Gemini Effect',
