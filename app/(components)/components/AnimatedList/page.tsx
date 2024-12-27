@@ -1,6 +1,7 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { BentoDemo } from '../preview/BentoGridDemo';
+import { AnimatedListDemo } from '../preview/AnimatedListDemo';
+
 
 export default function page() {
   return (
@@ -116,7 +117,7 @@ export function AnimatedListDemo({
         library="Magic UI"
         filename="AnimatedList.tsx"
         cli={`npx shadcn@latest add "https://magicui.design/r/animated-list"`}
-        Tab1={<BentoDemo />}
+        Tab1={<AnimatedListDemo />}
         child={
           <>
             <div>
