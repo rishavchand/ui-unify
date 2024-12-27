@@ -1,8 +1,7 @@
 import FullComponent from '@/components/FullComponent';
+import { MarqueeDemo } from '@/components/Marque';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { Snippet } from '@nextui-org/snippet';
-import { FaTerminal } from 'react-icons/fa';
-import { GoogleGeminiEffectDemo } from '../preview/GoogleGeminiEffectDemo';
+
 
 export default function page() {
   return (
@@ -112,7 +111,7 @@ export function MarqueeDemo() {
         library="Magic UI"
         filename="Marquee.tsx"
         cli={`npx shadcn@latest add "https://magicui.design/r/marquee"`}
-        Tab1={<GoogleGeminiEffectDemo />}
+        Tab1={<MarqueeDemo />}
         child={
           <>
             <div>
