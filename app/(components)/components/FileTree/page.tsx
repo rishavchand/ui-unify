@@ -1,6 +1,7 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { AnimatedCircularProgressBarDemo } from '../preview/AnimatedCircularProgressBarDemo';
+import { FileTreeDemo } from '../preview/FileTreeDemo';
+
 
 export default function page() {
   return (
@@ -123,7 +124,7 @@ const ELEMENTS = [
         library="Magic UI"
         filename="FileTree.tsx"
         cli={`npx shadcn@latest add "https://magicui.design/r/file-tree"`}
-        Tab1={<AnimatedCircularProgressBarDemo />}
+        Tab1={<FileTreeDemo />}
         child={
           <>
             <div>
