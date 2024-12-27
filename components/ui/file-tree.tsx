@@ -222,9 +222,7 @@ const Folder = forwardRef<
       isSelect,
       children,
       ...props
-    },
-    ref
-  ) => {
+    }  ) => {
     const {
       direction,
       handleExpand,
