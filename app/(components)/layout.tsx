@@ -22,7 +22,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </p>
       </header>
       <div className="sm:grid sm:grid-cols-6 min-h-screen">
-        <aside className="col-span-1 px-4 pl-10 border-r-2 pt-6 border-gray-200 dark:border-gray-700 hidden sm:block max-h-[calc(150vh-1rem)] overflow-y-auto">
+        <aside className="col-span-1 px-4 pl-10 border-r-2 pt-6 border-gray-200 dark:border-gray-700 hidden sm:block max-h-[calc(150vh-1rem)] overflow-y-auto ">
           {components.map((section, index) => (
             <div key={index} className="mb-6">
               <h2 className="font-semibold text-lg mb-2">{section.title}</h2>

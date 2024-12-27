@@ -160,26 +160,6 @@ export const components = [
         label: 'Textarea',
         Link: '/components/Textarea',
       },
-      {
-        label: 'Select',
-        Link: '/components/Select',
-      },
-      {
-        label: 'Slider',
-        Link: '/components/Slider',
-      },
-      {
-        label: 'Switch',
-        Link: '/components/Switch',
-      },
-      {
-        label: 'Tag',
-        Link: '/components/Tag',
-      },
-      {
-        label: 'Tooltip',
-        Link: '/components/Tooltip',
-      },
     ],
   },
 ];
