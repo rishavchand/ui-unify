@@ -26,7 +26,7 @@ export function Installation({ tab1Content, tab2Content }: TabsProps) {
         </TabsTrigger>
       </TabsList>
       <div className="mt-8">
-        <TabsContent className=" max-h-96 overflow-auto " value="cli">
+        <TabsContent className=" overflow-auto " value="cli">
           {tab1Content}
         </TabsContent>
         <TabsContent className="p-2  overflow-auto" value="manual">

@@ -276,6 +276,7 @@ export const AuroraBackground = ({
   );
 };
 `}
+filename='AuroraBackground.tsx'
                   />
                 </div>
               </div>
