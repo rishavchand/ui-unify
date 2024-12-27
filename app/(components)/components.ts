@@ -109,6 +109,10 @@ export const components = [
         Link : '/components/FlipWords'
       },
       {
+        label : 'Glare Card',
+        Link : '/components/GlareCard'
+      },
+      {
         label: 'Hover Card',
         Link: '/components/HoverCard',
       },
