@@ -26,7 +26,7 @@ export const components = [
       },
       {
         label: '3D Pin',
-        Link: '/components/3dP  in',
+        Link: '/components/3dPin',
       },
       {
         label: 'Accordion',
