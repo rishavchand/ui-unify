@@ -101,6 +101,10 @@ export const components = [
         Link: '/components/Dropdown',
       },
       {
+        label : 'File Upload',
+        Link : '/components/FileUpload'
+      },
+      {
         label: 'Hover Card',
         Link: '/components/HoverCard',
       },
