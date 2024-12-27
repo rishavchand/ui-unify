@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { AnimatedPinDemo } from '../preview/3dPinDemo';
+import { FlipWordsDemo } from '../preview/FlipWordsDemo';
 
 export default function page() {
   return (
@@ -30,7 +30,7 @@ export function FlipWordsDemo() {
         library="Aceternity UI"
         filename="FlipWords.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/flip-words.json`}
-        Tab1={<AnimatedPinDemo />}
+        Tab1={<FlipWordsDemo />}
         child={
           <>
             <div>
