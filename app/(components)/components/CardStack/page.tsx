@@ -3,7 +3,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { CardHoverEffectDemo } from '../preview/CardHoverEffectDemo';
+import { CardStackDemo } from '../preview/CardStackDemo';
+
 
 export default function page() {
   return (
@@ -87,7 +88,7 @@ const CARDS = [
         filename="CardStack.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/card-stack.json
 `}
-        Tab1={<CardHoverEffectDemo />}
+        Tab1={<CardStackDemo />}
         child={
           <>
             <div>
