@@ -21,6 +21,10 @@ export const components = [
     Components: 'Components ',
     children: [
       {
+        label: '3D Card Effect',
+        Link: '/components/3dCardEffect',
+      },
+      {
         label: 'Accordion',
         Link: '/components/Accordion',
       },
