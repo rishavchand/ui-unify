@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { GlareCardDemo } from '../preview/GlareCardDemo';
+import { GoogleGeminiEffectDemo } from '../preview/GoogleGeminiEffectDemo';
+
 
 export default function page() {
   return (
@@ -49,7 +50,7 @@ export function GoogleGeminiEffectDemo() {
         library="Aceternity UI"
         filename="GoogleGeminiEffect.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/google-gemini-effect.json`}
-        Tab1={<GlareCardDemo />}
+        Tab1={<GoogleGeminiEffectDemo />}
         child={
           <>
             <div>
