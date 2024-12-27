@@ -22,7 +22,7 @@ export const components = [
     children: [
       {
         label: '3D Card Effect',
-        Link: '/components/3dCard',
+        Link: '/components/3dcard',
       },
       {
         label: 'Accordion',
