@@ -44,7 +44,7 @@ const useTree = () => {
   return context;
 };
 
-interface TreeViewComponentProps extends React.HTMLAttributes<HTMLDivElement> {}
+interface TreeViewComponentProps {}
 
 type Direction = 'rtl' | 'ltr' | undefined;
 
@@ -55,6 +55,9 @@ type TreeViewProps = {
   initialExpandedItems?: string[];
   openIcon?: React.ReactNode;
   closeIcon?: React.ReactNode;
+  children?: React.ReactNode;
+  dir?: 'rtl' | 'ltr';
+  className?: string;
 } & TreeViewComponentProps;
 
 const Tree = forwardRef<HTMLDivElement, TreeViewProps>(
@@ -134,7 +137,7 @@ const Tree = forwardRef<HTMLDivElement, TreeViewProps>(
       if (initialSelectedId) {
         expandSpecificTargetedElements(elements, initialSelectedId);
       }
-    }, [initialSelectedId, elements]);
+    }, [initialSelectedId, elements, expandSpecificTargetedElements]);
 
     const direction = dir === 'rtl' ? 'rtl' : 'ltr';
 
@@ -297,7 +300,7 @@ const File = forwardRef<
     {
       value,
       className,
-      handleSelect,
+      // handleSelect,
       isSelectable = true,
       isSelect,
       fileIcon,
