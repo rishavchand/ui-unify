@@ -57,6 +57,10 @@ export const components = [
         Link : '/components/CardHoverEffect'
       },
       {
+        label: 'Card Stack',
+        Link: '/components/CardStack'
+      },
+      {
         label: 'Calendar',
         Link: '/components/Calendar',
       },
