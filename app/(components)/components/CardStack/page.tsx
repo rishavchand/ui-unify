@@ -10,64 +10,82 @@ export default function page() {
     <div>
       <FullComponent
         heading="Card Stack"
-        description="A card component with a spotlight effect revealing a radial gradient background."
-       code = {`import { CardSpotlight } from "@/components/ui/card-spotlight";
-
-export function CardSpotlightDemo() {
+        description="Cards stack on top of each other after some interval. Perfect for showing testimonials."
+        code={`"use client";
+import { CardStack } from "../ui/card-stack";
+import { cn } from "@/lib/utils";
+export function CardStackDemo() {
   return (
-    <CardSpotlight className="h-96 w-96">
-      <p className="text-xl font-bold relative z-20 mt-2 text-white">
-        Authentication steps
-      </p>
-      <div className="text-neutral-200 mt-4 relative z-20">
-        Follow these steps to secure your account:
-        <ul className="list-none  mt-2">
-          <Step title="Enter your email address" />
-          <Step title="Create a strong password" />
-          <Step title="Set up two-factor authentication" />
-          <Step title="Verify your identity" />
-        </ul>
-      </div>
-      <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-        Ensuring your account is properly secured helps protect your personal
-        information and data.
-      </p>
-    </CardSpotlight>
+    <div className="h-[40rem] flex items-center justify-center w-full">
+      <CardStack items={CARDS} />
+    </div>
   );
 }
 
-const Step = ({ title }: { title: string }) => {
+// Small utility to highlight the content of specific section of a testimonial content
+export const Highlight = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <li className="flex gap-2 items-start">
-      <CheckIcon />
-      <p className="text-white">{title}</p>
-    </li>
+    <span
+      className={cn(
+        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
+        className
+      )}
+    >
+      {children}
+    </span>
   );
 };
 
-const CheckIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="h-4 w-4 text-blue-500 mt-1 flex-shrink-0"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path
-        d="M12 2c-.218 0 -.432 .002 -.642 .005l-.616 .017l-.299 .013l-.579 .034l-.553 .046c-4.785 .464 -6.732 2.411 -7.196 7.196l-.046 .553l-.034 .579c-.005 .098 -.01 .198 -.013 .299l-.017 .616l-.004 .318l-.001 .324c0 .218 .002 .432 .005 .642l.017 .616l.013 .299l.034 .579l.046 .553c.464 4.785 2.411 6.732 7.196 7.196l.553 .046l.579 .034c.098 .005 .198 .01 .299 .013l.616 .017l.642 .005l.642 -.005l.616 -.017l.299 -.013l.579 -.034l.553 -.046c4.785 -.464 6.732 -2.411 7.196 -7.196l.046 -.553l.034 -.579c.005 -.098 .01 -.198 .013 -.299l.017 -.616l.005 -.642l-.005 -.642l-.017 -.616l-.013 -.299l-.034 -.579l-.046 -.553c-.464 -4.785 -2.411 -6.732 -7.196 -7.196l-.553 -.046l-.579 -.034a28.058 28.058 0 0 0 -.299 -.013l-.616 -.017l-.318 -.004l-.324 -.001zm2.293 7.293a1 1 0 0 1 1.497 1.32l-.083 .094l-4 4a1 1 0 0 1 -1.32 .083l-.094 -.083l-2 -2a1 1 0 0 1 1.32 -1.497l.094 .083l1.293 1.292l3.293 -3.292z"
-        fill="currentColor"
-        strokeWidth="0"
-      />
-    </svg>
-  );
-};
+const CARDS = [
+  {
+    id: 0,
+    name: "Manu Arora",
+    designation: "Senior Software Engineer",
+    content: (
+      <p>
+        These cards are amazing, <Highlight>I want to use them</Highlight> in my
+        project. Framer motion is a godsend ngl tbh fam 🙏
+      </p>
+    ),
+  },
+  {
+    id: 1,
+    name: "Elon Musk",
+    designation: "Senior Shitposter",
+    content: (
+      <p>
+        I dont like this Twitter thing,{" "}
+        <Highlight>deleting it right away</Highlight> because yolo. Instead, I
+        would like to call it <Highlight>X.com</Highlight> so that it can easily
+        be confused with adult sites.
+      </p>
+    ),
+  },
+  {
+    id: 2,
+    name: "Tyler Durden",
+    designation: "Manager Project Mayhem",
+    content: (
+      <p>
+        The first rule of
+        <Highlight>Fight Club</Highlight> is that you do not talk about fight
+        club. The second rule of
+        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
+        club.
+      </p>
+    ),
+  },
+];
 `}
         library="Aceternity UI"
-        filename="CardHoverEffect.tsx"
-        cli={`npx shadcn@latest add https://ui.aceternity.com/registry/card-spotlight.json
+        filename="CardStack.tsx"
+        cli={`npx shadcn@latest add https://ui.aceternity.com/registry/card-stack.json
 `}
         Tab1={<CardHoverEffectDemo />}
         child={
@@ -97,15 +115,83 @@ const CheckIcon = () => {
               <div>
                 <div className="overflow-x-auto mt-2 max-h-96">
                   <CodeBlockDemo
-                    code={`import { ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+                  code = {`"use client";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+let interval: any;
+
+type Card = {
+  id: number;
+  name: string;
+  designation: string;
+  content: React.ReactNode;
+};
+
+export const CardStack = ({
+  items,
+  offset,
+  scaleFactor,
+}: {
+  items: Card[];
+  offset?: number;
+  scaleFactor?: number;
+}) => {
+  const CARD_OFFSET = offset || 10;
+  const SCALE_FACTOR = scaleFactor || 0.06;
+  const [cards, setCards] = useState<Card[]>(items);
+
+  useEffect(() => {
+    startFlipping();
+
+    return () => clearInterval(interval);
+  }, []);
+  const startFlipping = () => {
+    interval = setInterval(() => {
+      setCards((prevCards: Card[]) => {
+        const newArray = [...prevCards]; // create a copy of the array
+        newArray.unshift(newArray.pop()!); // move the last element to the front
+        return newArray;
+      });
+    }, 5000);
+  };
+
+  return (
+    <div className="relative  h-60 w-60 md:h-60 md:w-96">
+      {cards.map((card, index) => {
+        return (
+          <motion.div
+            key={card.id}
+            className="absolute dark:bg-black bg-white h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
+            style={{
+              transformOrigin: "top center",
+            }}
+            animate={{
+              top: index * -CARD_OFFSET,
+              scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
+              zIndex: cards.length - index, //  decrease z-index for the cards that are behind
+            }}
+          >
+            <div className="font-normal text-neutral-700 dark:text-neutral-200">
+              {card.content}
+            </div>
+            <div>
+              <p className="text-neutral-500 font-medium dark:text-white">
+                {card.name}
+              </p>
+              <p className="text-neutral-400 font-normal dark:text-neutral-200">
+                {card.designation}
+              </p>
+            </div>
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+};
 `}
-                    filename="utils.ts"
-                  />
+filename='CardStack.tsx'
+                   />
                 </div>
               </div>
               <div className="flex gap-2 mt-4 ">
