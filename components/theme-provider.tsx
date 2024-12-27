@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { Attribute, ThemeProvider as NextThemesProvider } from 'next-themes';
 
 type Theme = 'dark' | 'light' | 'system';
 
@@ -11,7 +11,7 @@ type ThemeProviderProps = {
   storageKey?: string;
   enableSystem?: boolean;
   disableTransitionOnChange?: boolean;
-  attribute?: string;
+  attribute?: Attribute | Attribute[];
 };
 
 export function ThemeProvider({
