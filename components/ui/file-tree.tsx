@@ -44,7 +44,6 @@ const useTree = () => {
   return context;
 };
 
-interface TreeViewComponentProps {}
 
 type Direction = 'rtl' | 'ltr' | undefined;
 
@@ -58,7 +57,7 @@ type TreeViewProps = {
   children?: React.ReactNode;
   dir?: 'rtl' | 'ltr';
   className?: string;
-} & TreeViewComponentProps;
+};
 
 const Tree = forwardRef<HTMLDivElement, TreeViewProps>(
   (
@@ -228,7 +227,7 @@ const Folder = forwardRef<
       children,
       ...props
     },
-    ref
+    _ref
   ) => {
     const {
       direction,
