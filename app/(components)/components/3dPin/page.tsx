@@ -65,7 +65,7 @@ export function AnimatedPinDemo() {
                 <div className="w-6 h-6 rounded-full bg-gray-800 dark:bg-gray-200 flex items-center justify-center text-white dark:text-black">
                   2
                 </div>
-                <div>Add util file</div>
+                <div>Add util file (lib/utils.ts)</div>
               </div>
               <div>
                 <div className="overflow-x-auto mt-2 max-h-96">
