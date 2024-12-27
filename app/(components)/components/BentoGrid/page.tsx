@@ -1,6 +1,7 @@
 import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
-import { HeroVideoDialogDemo } from '../preview/HeroVideoDialogDemo';
+import { BentoDemo } from '../preview/BentoGridDemo';
+
 
 export default function page() {
   return (
@@ -129,7 +130,7 @@ export function BentoDemo() {
         library="Magic UI"
         filename="BentoGrid.tsx"
         cli={`npx shadcn@latest add "https://magicui.design/r/bento-grid"`}
-        Tab1={<HeroVideoDialogDemo />}
+        Tab1={<BentoDemo />}
         child={
           <>
             <div>
