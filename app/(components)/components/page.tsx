@@ -29,7 +29,7 @@ const InstallationPage = () => {
           Next.js
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          Install Next.js with{' '}
+          Install Next.js with&nbsp;
           <code className="bg-gray-100 dark:bg-zinc-800 px-1 rounded">
             create-next-app
           </code>
@@ -189,7 +189,7 @@ const InstallationPage = () => {
           </Snippet>
         </div>
         <p className="text-gray-600 dark:text-gray-400 mb-4 mt-4">
-          if you're using <code>motion</code> instead of{' '}
+          if you&apos;re using <code>motion</code> instead of&nbsp;
           <code>framer-motion</code>, you can make the following changes:
         </p>
 

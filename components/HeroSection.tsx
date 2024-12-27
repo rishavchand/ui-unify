@@ -1,5 +1,5 @@
 'use client';
-import { Github, GithubIcon, Sparkles, Wand2 } from 'lucide-react';
+import {  GithubIcon, Sparkles, Wand2 } from 'lucide-react';
 import { HoverBorderGradient } from './ui/hover-border-gradient';
 import { Spotlight } from './ui/spotlight';
 import { motion } from 'framer-motion';

@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { div } from "framer-motion/client";
+
 
 type SpotlightProps = {
   className?: string;
