@@ -2,7 +2,8 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { ThreeDCardDemo } from '../preview/3dCardDemo';
+import { AnimatedPinDemo } from '../preview/3dPinDemo';
+
 
 export default function page() {
   return (
@@ -41,7 +42,7 @@ export function AnimatedPinDemo() {
         filename="3DPin.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/3d-pin.json
 `}
-        Tab1={<ThreeDCardDemo />}
+        Tab1={<AnimatedPinDemo />}
         child={
           <>
             <div>

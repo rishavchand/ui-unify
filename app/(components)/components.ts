@@ -25,6 +25,10 @@ export const components = [
         Link: '/components/3Dcard',
       },
       {
+        label: '3D Pin',
+        Link: '/components/3dP  in',
+      },
+      {
         label: 'Accordion',
         Link: '/components/Accordion',
       },
