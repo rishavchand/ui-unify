@@ -145,6 +145,10 @@ export const components = [
         Link: '/components/Pagination',
       },
       {
+        label : 'Text Reveal Card',
+        Link: '/components/TextRevealCard',
+      },
+      {
         label: 'Table',
         Link: '/components/Table',
       },
