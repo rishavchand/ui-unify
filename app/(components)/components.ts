@@ -105,6 +105,10 @@ export const components = [
         Link : '/components/FileUpload'
       },
       {
+        label : 'Flip Words',
+        Link : '/components/FlipWords'
+      },
+      {
         label: 'Hover Card',
         Link: '/components/HoverCard',
       },
