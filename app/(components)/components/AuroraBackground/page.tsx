@@ -2,7 +2,7 @@ import FullComponent from '@/components/FullComponent';
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import { Snippet } from '@nextui-org/snippet';
 import { FaTerminal } from 'react-icons/fa';
-import { AnimatedPinDemo } from '../preview/3dPinDemo';
+import { AuroraBackgroundDemo } from '../preview/AuroraBackgroundDemo';
 
 export default function page() {
   return (
@@ -46,7 +46,7 @@ export function AuroraBackgroundDemo() {
         library="Aceternity UI"
         filename="AuroraBackground.tsx"
         cli={`npx shadcn@latest add https://ui.aceternity.com/registry/aurora-background.json`}
-        Tab1={<AnimatedPinDemo />}
+        Tab1={<AuroraBackgroundDemo />}
         tab1Extra={
           <>
             <div className="mt-4">
