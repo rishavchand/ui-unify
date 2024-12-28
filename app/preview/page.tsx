@@ -27,7 +27,7 @@ export default function PreviewPage() {
                 .replace(/\\n/g, '\n') // Replace escaped newlines with actual newlines
                 .replace(/```jsx/g, '') // Remove ```jsx markers
                 .replace(/```/g, '') // Remove ``` markers
-                .replace(/"/g, ''); // Remove double quotes
+                .replace(/\\"/g, '"'); // Replace escaped double quotes with actual double quotes
             setComponentCode(sanitizedCode);
         } catch (err) {
             console.error('Error retrieving component code:', err);
