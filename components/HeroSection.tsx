@@ -83,7 +83,10 @@ export function Hero() {
               containerClassName="rounded-full"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-3"
               as="button"
-              onClick={() => (window.location.href = 'https://github.com')}
+              onClick={() =>
+                (window.location.href =
+                  'https://github.com/PankajKumardev/ui-unify')
+              }
             >
               <span className="flex gap-2 text-base font-medium">
                 Star on GitHub <GithubIcon className="w-5 h-5" />
@@ -155,11 +158,9 @@ export function Hero() {
             </p>
 
             <Link href="/Ai">
-              <div
-              className="mt-4 flex justify-center items-center gap-2 text-base font-medium text-white cursor-pointer bg-orange-500 p-2 rounded-lg hover:bg-orange-600 transition-colors w-40 mx-auto"
-              >
-              <Wand2 className="w-5 h-5" />
-              <span className="text-lg font-bold">Try Now</span>
+              <div className="mt-4 flex justify-center items-center gap-2 text-base font-medium text-white cursor-pointer bg-orange-500 p-2 rounded-lg hover:bg-orange-600 transition-colors w-40 mx-auto">
+                <Wand2 className="w-5 h-5" />
+                <span className="text-lg font-bold">Try Now</span>
               </div>
             </Link>
           </motion.div>
