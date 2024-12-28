@@ -98,7 +98,7 @@ give this only not anyother line no file name like jsx tsx
       </header>
       <div className="flex justify-center">
         <div className="w-full max-w-lg">
-          <h1 className="text-4xl mt-10 font-semibold text-center">
+          <h1 className="text-4xl md:mt-20 mt-10 font-semibold text-center">
             What do you want to build?
           </h1>
           <p className="text-center mt-2 text-gray-700 dark:text-gray-200">
