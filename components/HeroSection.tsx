@@ -1,5 +1,5 @@
 'use client';
-import {  GithubIcon, Sparkles, Wand2 } from 'lucide-react';
+import { GithubIcon, Sparkles, Wand2 } from 'lucide-react';
 import { HoverBorderGradient } from './ui/hover-border-gradient';
 import { Spotlight } from './ui/spotlight';
 import { motion } from 'framer-motion';
@@ -107,7 +107,7 @@ export function Hero() {
             transition={{ delay: 0.6 }}
             className="mt-16 grid grid-cols-3 gap-8"
           >
-            {['Acernity UI', 'Magic UI', 'Shadcn/ui'].map((lib) => (
+            {['Aceternity UI', 'Magic UI', 'Shadcn/ui'].map((lib) => (
               <div key={lib} className="flex flex-col items-center space-y-2">
                 <div className="w-16 h-16 rounded-2xl bg-orange-500/10 flex items-center justify-center">
                   <Sparkles className="w-8 h-8 text-orange-500" />
@@ -160,7 +160,7 @@ export function Hero() {
               'UÍ-Unify is based on ',
               'Nextjs',
               'TailwindCSS',
-              'Acernity',
+              'Aceternity',
               'Magic UI',
               'Shadcn/ui',
             ]}
