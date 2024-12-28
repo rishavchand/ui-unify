@@ -3,6 +3,7 @@ import { GithubIcon, Sparkles, Wand2 } from 'lucide-react';
 import { HoverBorderGradient } from './ui/hover-border-gradient';
 import { Spotlight } from './ui/spotlight';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 import {
   TextRevealCard,
@@ -132,6 +133,38 @@ export function Hero() {
           </p>
         </div> */}
       </div>
+
+      <div className="flex justify-center mt-24">
+        <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="space-y-6"
+          >
+            <h2 className="text-4xl sm:text-6xl font-bold">
+              <span className="bg-gradient-to-r from-orange-400 to-orange-700 text-transparent bg-clip-text">
+                AI-Powered
+              </span>{' '}
+              <span className="text-gray-400">Development</span>
+            </h2>
+            <p className="text-xl font-medium text-gray-600 dark:text-gray-300">
+              Create stunning components with AI assistance.
+              <br />
+              Just describe what you need, and watch the magic happen.
+            </p>
+
+            <div
+              className="mt-4 flex justify-center items-center gap-2 text-base font-medium text-white cursor-pointer bg-orange-500 p-2 rounded-lg hover:bg-orange-600 transition-colors w-40 mx-auto"
+              onClick={() => (window.location.href = '/Ai')}
+            >
+              <Wand2 className="w-5 h-5" />
+              <span className="text-lg font-bold">Try Now</span>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
       <div className="flex justify-center align-middle mt-12">
         <div className="mt-10 mb-4 ">
           <div>
