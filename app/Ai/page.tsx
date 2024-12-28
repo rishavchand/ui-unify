@@ -1,23 +1,8 @@
-export default function Page() {
-  const sendPostRequest = async () => {
-    const response = await fetch('/api/Gemini/route', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ prompt: 'Your prompt here' }),
-    });
+'use client';
+import { useState } from 'react';
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error('Error:', errorData.error);
-    } else {
-      const data = await response.json();
-      console.log('Response:', data.response);
-    }
-  };
-
-  sendPostRequest();
+export default function page() {
+  const [prompt, setPrompt] = useState('');
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <header className="text-center mb-10">
@@ -46,8 +31,18 @@ export default function Page() {
               className="rounded-md w-full h-32 p-4 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-400"
               placeholder="Enter your prompt here..."
               style={{ width: '100%' }}
-              
+              onChange={(e) => setPrompt(e.target.value)}
             />
+          </div>
+          <div className="mt-2 flex justify-center">
+            <button
+              className="bg-red-400 dark:bg-red-600 text-white h-10 w-32 rounded-lg transition-colors duration-300 hover:bg-red-500 dark:hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 dark:focus:ring-red-600"
+              onClick={() => {
+                console.log(prompt);
+              }}
+            >
+              Submit Prompt
+            </button>
           </div>
         </div>
       </div>

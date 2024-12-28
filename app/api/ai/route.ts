@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest, NextResponse } from 'next/server';
 
 const googleApiKey = process.env.GOOGLE_API_KEY;
 if (!googleApiKey) {
@@ -8,11 +8,11 @@ if (!googleApiKey) {
 
 const genAI = new GoogleGenerativeAI(googleApiKey);
 
-export const POST = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { prompt } = req.body;
+export const POST = async (req: NextRequest) => {
+  const { prompt } = await req.json();
 
   if (!prompt) {
-    return res.status(400).json({ error: 'Prompt is required' });
+    return NextResponse.json({ error: 'Prompt is required' }, { status: 400 });
   }
 
   const model = genAI.getGenerativeModel({
@@ -24,9 +24,12 @@ export const POST = async (req: NextApiRequest, res: NextApiResponse) => {
     const responseText = result.response.text
       ? result.response.text()
       : JSON.stringify(result.response);
-    return res.status(200).json({ response: responseText });
+    return NextResponse.json({ response: responseText }, { status: 200 });
   } catch (e) {
     console.error('Error occurred while generating AI content', e);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 }
+    );
   }
 };
