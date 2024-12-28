@@ -40,7 +40,7 @@ export default function TermsOfService() {
                     </h2>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Our service is provided "as is" and "as available" without any
+                    Our service is provided &quot;as is&quot; and &quot;as available&quot; without any
                     warranties, either express or implied. We do not warrant that the
                     service will be uninterrupted, secure, or error-free.
                 </p>
@@ -69,7 +69,7 @@ export default function TermsOfService() {
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                     We reserve the right to modify or replace these Terms at any time. If
-                    a revision is material, we will provide at least 30 days' notice prior
+                    a revision is material, we will provide at least 30 days&apos; notice prior
                     to any new terms taking effect.
                 </p>
             </section>
