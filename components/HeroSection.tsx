@@ -154,13 +154,14 @@ export function Hero() {
               Just describe what you need, and watch the magic happen.
             </p>
 
-            <div
+            <Link href="/Ai">
+              <div
               className="mt-4 flex justify-center items-center gap-2 text-base font-medium text-white cursor-pointer bg-orange-500 p-2 rounded-lg hover:bg-orange-600 transition-colors w-40 mx-auto"
-              onClick={() => (window.location.href = '/Ai')}
-            >
+              >
               <Wand2 className="w-5 h-5" />
               <span className="text-lg font-bold">Try Now</span>
-            </div>
+              </div>
+            </Link>
           </motion.div>
         </div>
       </div>
