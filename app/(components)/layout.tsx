@@ -19,7 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           Components
         </h1>
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mt-4">
-          Explore examples and demos of our unified UI components in action.
+          Explore the extensive collection of unified UI components.
         </p>
       </header>
       <div className="sm:grid sm:grid-cols-6 min-h-screen">
