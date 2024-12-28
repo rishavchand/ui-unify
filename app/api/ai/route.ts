@@ -9,10 +9,25 @@ if (!googleApiKey) {
 const genAI = new GoogleGenerativeAI(googleApiKey);
 
 export const POST = async (req: NextRequest) => {
+  // Add CORS headers allowing only your frontend domain
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': 'https://ui-unify.vercel.app',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
+
+  // Handle preflight (OPTIONS) requests
+  if (req.method === 'OPTIONS') {
+    return NextResponse.json({}, { headers: corsHeaders, status: 200 });
+  }
+
   const { prompt } = await req.json();
 
   if (!prompt) {
-    return NextResponse.json({ error: 'Prompt is required' }, { status: 400 });
+    return NextResponse.json(
+      { error: 'Prompt is required' },
+      { headers: corsHeaders, status: 400 }
+    );
   }
 
   const model = genAI.getGenerativeModel({
@@ -24,12 +39,16 @@ export const POST = async (req: NextRequest) => {
     const responseText = result.response.text
       ? result.response.text()
       : JSON.stringify(result.response);
-    return NextResponse.json({ response: responseText }, { status: 200 });
+
+    return NextResponse.json(
+      { response: responseText },
+      { headers: corsHeaders, status: 200 }
+    );
   } catch (e) {
     console.error('Error occurred while generating AI content', e);
     return NextResponse.json(
       { error: 'Internal Server Error' },
-      { status: 500 }
+      { headers: corsHeaders, status: 500 }
     );
   }
 };
