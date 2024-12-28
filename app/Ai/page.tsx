@@ -1,4 +1,23 @@
 export default function Page() {
+  const sendPostRequest = async () => {
+    const response = await fetch('/api/Gemini/route', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ prompt: 'Your prompt here' }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Error:', errorData.error);
+    } else {
+      const data = await response.json();
+      console.log('Response:', data.response);
+    }
+  };
+
+  sendPostRequest();
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <header className="text-center mb-10">
@@ -27,6 +46,7 @@ export default function Page() {
               className="rounded-md w-full h-32 p-4 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-400"
               placeholder="Enter your prompt here..."
               style={{ width: '100%' }}
+              
             />
           </div>
         </div>
