@@ -24,23 +24,24 @@ export default function Sidebar() {
       <div className="px-4 pl-6 h-full pt-6">
         {components.map((section, index) => (
           <div key={index} className="mb-8">
-            <h2 className="font-semibold text-lg mb-3">
-              {section.title || section.Installation || section.Components}
-            </h2>
-            <ul className="space-y-2">
-              {section.children.map((child, idx) => (
-                <li key={idx}>
-                  <a
-                    href={child.Link}
-                    className={`text-gray-600 dark:text-gray-200 hover:underline transition-all duration-300 ease-in-out ${
-                      pathname === child.Link ? 'font-bold text-red-500' : ''
-                    }`}
-                  >
-                    {child.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <h2 className="font-semibold text-lg mb-3">
+          {section.title || section.Installation || section.Components}
+        </h2>
+        <ul className="space-y-2">
+          {section.children.map((child, idx) => (
+            <li key={idx}>
+          <NavLink href={child.Link}>
+            <span
+              className={`text-gray-600 dark:text-gray-200 hover:underline transition-all duration-300 ease-in-out ${
+            pathname === child.Link ? 'font-bold text-red-500' : ''
+              }`}
+            >
+              {child.label}
+            </span>
+          </NavLink>
+            </li>
+          ))}
+        </ul>
           </div>
         ))}
       </div>
