@@ -25,40 +25,14 @@ export default function PromptPage() {
 13. Keep the component minimal yet visually appealing, avoiding unnecessary complexity.
 14. Assume that Tailwind CSS and React are pre-installed.
 15. If the prompt is vague, generate a basic yet functional UI component.
-16. donot import anything majorly as it is rendering
-17. donot use inline fn
-18. import { motion } from 'framer-motion';
-
-const Marquee = ({ children, speed = 10 }) => {
-  // Default speed is 10 if not provided
-
-  return (
-    <div className=\overflow-hidden\>
-      <motion.div
-        style={{ x: 0 }}
-        animate={{ x: -100 }}
-        transition={{
-           duration: speed,
-          ease: 'linear',
-          repeat: Infinity,
-        }}
-      >
-        <div className=\inline-flex\>{children}</div>
-        <div className=\inline-flex\>{children}</div> {/* Duplicate for seamless loop */}
-      </motion.div>
-    </div>
-  );
-};
-
-export default Marquee;
-give this only not anyother line no file name like jsx tsx 
+16. donot import anything majorly as it is rendering"
 `;
 
   const handleSubmit = async () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post('https://ui-unify.vercel.app/api/ai', {
+      const response = await axios.post('http://localhost:3000/api/ai', {
         prompt: preprompt + prompt,
       });
 
