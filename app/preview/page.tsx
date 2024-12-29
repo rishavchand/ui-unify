@@ -3,6 +3,8 @@
 import { CodeBlockDemo } from '@/components/ui/Codeblock';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 
 export default function PreviewPage() {
   const [componentCode, setComponentCode] = useState('');
@@ -58,12 +60,13 @@ export default function PreviewPage() {
           </pre>
         )}
       </div>
-      <button
-        onClick={() => router.push('/Ai')}
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md"
-      >
+
+    <Link href="/Ai">
+      <button className="mt-4 px-4 py-2 border border-gray-300 text-gray-700 dark:text-gray-300 rounded-md flex items-center hover:bg-gray-100 dark:hover:bg-gray-700">
+        <ArrowLeft className="w-5 h-5 mr-2" />
         Back
       </button>
+    </Link>
     </div>
   );
 }
