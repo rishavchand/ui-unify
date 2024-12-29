@@ -38,7 +38,7 @@ const Marquee = ({ children, speed = 10 }) => {
         style={{ x: 0 }}
         animate={{ x: -100 }}
         transition={{
-          duration: speed,
+           duration: speed,
           ease: 'linear',
           repeat: Infinity,
         }}
@@ -92,8 +92,7 @@ give this only not anyother line no file name like jsx tsx
           AI Components
         </h1>
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mt-4">
-          Create, customize, and integrate components effortlessly with our
-          AI-powered tools.
+          Enter your prompt below to get instant React component code.
         </p>
       </header>
       <div className="flex justify-center">
