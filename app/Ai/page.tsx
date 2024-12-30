@@ -77,17 +77,23 @@ export default function PromptPage() {
           <p className="text-center mt-2 text-gray-700 dark:text-gray-200">
             Generate and copy the code for your custom component.
           </p>
-          <div className="mt-10">
+            <div className="mt-10">
             <textarea
               className="rounded-md w-full h-32 p-4 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-400"
               placeholder="Enter your prompt here..."
               onChange={(e) => setPrompt(e.target.value)}
+              onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSubmit();
+              }
+              }}
             />
-          </div>
-          {error && (
+            </div>
+            {error && (
             <div className="mt-2 text-red-500 text-center">{error}</div>
-          )}
-          <div className="mt-2 flex justify-center">
+            )}
+            <div className="mt-2 flex justify-center">
             <button
               className="bg-red-400 dark:bg-red-600 text-white h-10 w-32 rounded-lg transition-colors duration-300 hover:bg-red-500 dark:hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 dark:focus:ring-red-600"
               onClick={handleSubmit}
@@ -95,7 +101,7 @@ export default function PromptPage() {
             >
               {loading ? 'Loading...' : 'Submit Prompt'}
             </button>
-          </div>
+            </div>
         </div>
       </div>
     </div>
