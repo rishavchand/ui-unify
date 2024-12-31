@@ -79,7 +79,7 @@ UI-Unify aggregates components from multiple UI libraries into a single platform
 1. Clone the repository:
    ```bash
    git clone https://github.com/PankajKumardev/ui-unify.git
-   cd UI-Unify
+   cd ui-unify
    ```
 2. Install dependencies:
    ```bash
