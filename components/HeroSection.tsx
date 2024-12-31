@@ -136,6 +136,15 @@ export function Hero() {
           </p>
         </div> */}
       </div>
+      <div className="flex items-center md:justify-center px-4 w-full z-[100] mb-4">
+        <Link className="z-[100]" href="" target="_blank">
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=733091&theme=dark"
+            alt="Product Hunt"
+            className="w-auto h-auto z-50"
+          />
+        </Link>
+      </div>
 
       <div className="flex justify-center mt-24">
         <div className="text-center">
