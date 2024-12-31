@@ -34,7 +34,7 @@ UI-Unify aggregates components from multiple UI libraries into a single platform
 ## 💻 Tech Stack
 
 | **Category**   | **Technology**                      |
-| -------------- | ----------------------------------- | --- |
+| -------------- | ----------------------------------- |
 | Frontend       | Next.js, TailwindCSS, Framer Motion |
 | Backend        | Next.js API                         |     
 | AI Integration | Gemini API                          |
