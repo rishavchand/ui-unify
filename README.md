@@ -4,7 +4,7 @@
 
  
 
-![Stars](https://img.shields.io/github/stars/PankajKumardev/ui-unify?style=social) ![Forks](https://img.shields.io/github/forks/PankajKumardev/ui-unify?style=social) ![Issues](https://img.shields.io/github/issues/PankajKumardev/ui-unify) ![License](https://img.shields.io/github/license/PankajKumardev/ui-unify)
+![Stars](https://img.shields.io/github/stars/PankajKumardev/ui-unify?style=social) ![Forks](https://img.shields.io/github/forks/PankajKumardev/ui-unify?style=social) ![Issues](https://img.shields.io/github/issues/PankajKumardev/ui-unify) 
 
 ## 🌟 Overview
 
