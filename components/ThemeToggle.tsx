@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import React from 'react';
 
 export function ThemeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -27,12 +27,12 @@ export function ThemeToggle() {
     >
       <SunIcon
         className={`absolute inset-0 h-5 w-5 m-auto transition-all ${
-          theme === 'light' ? 'scale-100 rotate-0' : 'scale-0 -rotate-90'
+          (theme === 'light' || resolvedTheme === 'light') ? 'scale-100 rotate-0' : 'scale-0 -rotate-90'
         }`}
       />
       <MoonIcon
         className={`absolute inset-0 h-5 w-5 m-auto transition-all ${
-          theme === 'dark' ? 'scale-100 rotate-0' : 'scale-0 rotate-90'
+          (theme === 'dark' || resolvedTheme === 'dark') ? 'scale-100 rotate-0' : 'scale-0 rotate-90'
         }`}
       />
     </button>
