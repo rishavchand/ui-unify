@@ -1,5 +1,5 @@
 
-# Contributing to FlowPay
+# Contributing to UI-Unify
 
 We welcome contributions to **UI-Unify** and appreciate the effort made by every contributor. If you're interested in improving the project, here's how you can get involved:
 
