@@ -18,7 +18,7 @@ import { FlipWords } from './ui/flip-words';
 export function Hero() {
   return (
     <div className="relative  overflow-hidden ">
-      <div className="flex justify-center sm:mt-0 mt-4 overflow-hidden">
+      <div className="flex justify-center sm:mt-0 mt-8 overflow-hidden">
         <Spotlight className="hidden sm:block" />
       </div>
       <motion.div
@@ -39,7 +39,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl sm:text-7xl font-bold text-center"
+            className="text-5xl sm:text-7xl font-bold text-center"
           >
             <span className="bg-gradient-to-r from-orange-400 to-orange-700 text-transparent bg-clip-text">
               Multiple UI
@@ -51,7 +51,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl sm:text-7xl font-bold text-center mt-2```"
+            className="text-5xl sm:text-7xl font-bold text-center mt-2```"
           >
             <span className="bg-gradient-to-r from-orange-400 to-orange-700 text-transparent bg-clip-text">
               One Platform,
@@ -65,10 +65,10 @@ export function Hero() {
             transition={{ delay: 0.4 }}
             className="mt-8 text-center space-y-4"
           >
-            <p className="text-xl font-medium dark:text-slate-200 text-slate-500">
+            <p className="px-4 sm:text-xl text-lg font-medium dark:text-slate-200 text-slate-500">
               Bring together the best components from multiple UI libraries,
             </p>
-            <p className="text-xl font-medium dark:text-slate-200 text-slate-500">
+            <p className="px-4 sm:text-xl text-lg font-medium dark:text-slate-200 text-slate-500">
               making development faster, easier, and more efficient.
             </p>
           </motion.div>
@@ -88,8 +88,8 @@ export function Hero() {
                   'https://github.com/PankajKumardev/ui-unify')
               }
             >
-              <span className="flex gap-2 text-base font-medium">
-                Star on GitHub <GithubIcon className="w-5 h-5" />
+              <span className="flex  text-sm sm:text-base font-medium gap-2  ">
+                Star on GitHub <GithubIcon className=" w-5 h-5 " />
               </span>
             </HoverBorderGradient>
 
@@ -99,7 +99,7 @@ export function Hero() {
               as="button"
               onClick={() => (window.location.href = '/components')}
             >
-              <span className="flex gap-2 text-base font-medium">
+              <span className="flex gap-2 sm:text-base text-sm font-medium">
                 Components <Wand2 className="w-5 h-5" />
               </span>
             </HoverBorderGradient>
@@ -137,11 +137,14 @@ export function Hero() {
         </div> */}
       </div>
       <div className="flex items-center justify-center px-4 w-full  mb-4 align-middle">
-        <Link href="https://www.producthunt.com/posts/ui-unify?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ui&#0045;unify" target="_blank">
+        <Link
+          href="https://www.producthunt.com/posts/ui-unify?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ui&#0045;unify"
+          target="_blank"
+        >
           <img
-        src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=746617&theme=dark"
-        alt="U&#0205;&#0045;Unify - Multiple&#0032;UI&#0032;Libraries&#0044;&#0032;One&#0032;Platform&#0044;&#0032;Simplified | Product Hunt"
-        className="w-auto h-auto z-50"
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=746617&theme=dark"
+            alt="U&#0205;&#0045;Unify - Multiple&#0032;UI&#0032;Libraries&#0044;&#0032;One&#0032;Platform&#0044;&#0032;Simplified | Product Hunt"
+            className="w-auto h-auto z-50"
           />
         </Link>
       </div>
@@ -154,13 +157,13 @@ export function Hero() {
             transition={{ delay: 0.7 }}
             className="space-y-6"
           >
-            <h2 className="text-4xl sm:text-6xl font-bold">
+            <h2 className="text-5xl sm:text-6xl font-bold">
               <span className="bg-gradient-to-r from-orange-400 to-orange-700 text-transparent bg-clip-text">
                 AI-Powered
               </span>{' '}
               <span className="text-gray-400">Development</span>
             </h2>
-            <p className="text-xl font-medium text-gray-600 dark:text-gray-300">
+            <p className=" px-4 text-xl font-medium text-gray-600 dark:text-gray-300">
               Create stunning components with AI assistance.
               <br />
               Just describe what you need, and watch the magic happen.
@@ -183,7 +186,7 @@ export function Hero() {
               <h1 className="flex justify-center text-4xl sm:text-6xl font-bold text-gray-600 dark:text-gray-400">
                 Components Demo
               </h1>
-              <p className="flex justify-center text-lg font-medium  dark:text-gray-400  text-gray-600 mt-4 px-4 ">
+              <p className="flex  justify-center text-lg font-medium  dark:text-gray-400  text-gray-600 mt-4 px-4 ">
                 Here are some of the components that you can use to build your
                 landing pages.
               </p>
@@ -191,7 +194,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 px-4 sm:px-0">
         <div>
           <MarqueeDemo />
         </div>
