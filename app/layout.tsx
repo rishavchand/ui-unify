@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Navigation } from '@/components/Navgation';
 import Footer from '@/components/Footer';
 import { Analytics } from "@vercel/analytics/react"
+import LenisProvider from '@/lib/LenisProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -39,7 +40,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navigation />
+          <LenisProvider>
           <main className="">{children}</main>
+          </LenisProvider>
           <Footer/>
         </ThemeProvider>
       </body>

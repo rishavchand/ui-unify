@@ -19,7 +19,7 @@ export function Installation({ tab1Content, tab2Content }: TabsProps) {
         </TabsTrigger>
         <TabsTrigger
           value="manual"
-          className="px-4 py-2 data-[state=active]:border-b-2 data-[state=active]:border-b-blue-500 dark:data-[state=active]:border-b-blue-400 data-[state=active]:rounded-none flex items-center"
+          className="px-4 py-2 data-[state=active]:border-b-2 dark-[state=active]:border-b-blue-500 dark:data-[state=active]:border-b-blue-400 data-[state=active]:rounded-none flex items-center"
         >
           <FaHandPaper className="mr-2" />
           Manual
