@@ -1,13 +1,5 @@
 # UI-Unify
 
-![image](https://github.com/user-attachments/assets/2997d994-8d1e-4c8b-92e5-d0d94c5427ba)
-
- 
-
-![Stars](https://img.shields.io/github/stars/PankajKumardev/ui-unify?style=social) ![Forks](https://img.shields.io/github/forks/PankajKumardev/ui-unify?style=social) ![Issues](https://img.shields.io/github/issues/PankajKumardev/ui-unify) 
-
-## 🌟 Overview
-
 UI-Unify aggregates components from multiple UI libraries into a single platform for seamless integration, exploration, and implementation. It simplifies UI development with diverse library access, empowering developers to create elegant interfaces effortlessly.
 
 ---
@@ -82,7 +74,7 @@ UI-Unify aggregates components from multiple UI libraries into a single platform
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/PankajKumardev/ui-unify.git
+   git clone https://github.com/rishavchand/ui-unify.git
    cd ui-unify
    ```
 2. Install dependencies:
@@ -106,7 +98,7 @@ UI-Unify aggregates components from multiple UI libraries into a single platform
 1. **Fork the repository** by clicking the "Fork" button.
 2. **Clone your fork:**
    ```bash
-   git clone https://github.com/pankajkumardev/ui-unify.git
+   git clone https://github.com/rishavchand/ui-unify.git
    ```
 3. **Create a new branch:**
    ```bash
@@ -145,8 +137,6 @@ UI-Unify is available under the MIT License. Feel free to use and modify respons
 
 ---
 
-## 📖 Changelog
 
-Refer to [`CHANGELOG.md`](https://github.com/PankajKumardev/UI-Unify/blob/main/CHANGELOG.md) for updates.
 
 
