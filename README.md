@@ -149,12 +149,4 @@ UI-Unify is available under the MIT License. Feel free to use and modify respons
 
 Refer to [`CHANGELOG.md`](https://github.com/PankajKumardev/UI-Unify/blob/main/CHANGELOG.md) for updates.
 
----
 
-## 📬 Contact
-
-For queries or collaborations:
-
-- Email: [pankajams1234@gmail.com](mailto:pankajams1234@gmail.com)
-- LinkedIn: [Pankaj Kumar](https://www.linkedin.com/in/pankajkumardev0/)
-- Twitter: [@pankajkumar_dev](https://x.com/pankajkumar_dev)
