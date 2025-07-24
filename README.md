@@ -123,14 +123,6 @@ UI-Unify aggregates components from multiple UI libraries into a single platform
 
 ---
 
-## 🌟 Stargazers & Forkers
-
-We appreciate your support! 🌟🍴
-
-[![Stargazers](https://img.shields.io/github/stars/PankajKumardev/UI-Unify)](https://github.com/PankajKumardev/UI-Unify/stargazers) [![Forks](https://img.shields.io/github/forks/PankajKumardev/UI-Unify)](https://github.com/PankajKumardev/UI-Unify/network/members)
-
----
-
 ## 🛡 License
 
 UI-Unify is available under the MIT License. Feel free to use and modify responsibly.
