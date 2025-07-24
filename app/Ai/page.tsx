@@ -32,7 +32,7 @@ export default function PromptPage() {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post('https://ui-unify.vercel.app/api/ai', {
+      const response = await axios.post('http://localhost:3000/api/ai', {
         prompt: preprompt + prompt,
       });
 

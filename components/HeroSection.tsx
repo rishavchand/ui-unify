@@ -85,7 +85,7 @@ export function Hero() {
               as="button"
               onClick={() =>
                 (window.location.href =
-                  'https://github.com/PankajKumardev/ui-unify')
+                  'https://github.com/rishavchand/ui-unify')
               }
             >
               <span className="flex  text-sm sm:text-base font-medium gap-2  ">
@@ -136,18 +136,7 @@ export function Hero() {
           </p>
         </div> */}
       </div>
-      <div className="flex items-center justify-center px-4 w-full  mb-4 align-middle">
-        <Link
-          href="https://www.producthunt.com/posts/ui-unify?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ui&#0045;unify"
-          target="_blank"
-        >
-          <img
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=746617&theme=dark"
-            alt="U&#0205;&#0045;Unify - Multiple&#0032;UI&#0032;Libraries&#0044;&#0032;One&#0032;Platform&#0044;&#0032;Simplified | Product Hunt"
-            className="w-auto h-auto z-50"
-          />
-        </Link>
-      </div>
+      
 
       <div className="flex justify-center mt-24">
         <div className="text-center">

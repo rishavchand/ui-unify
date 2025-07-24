@@ -23,12 +23,12 @@ const navLinks = [
 const socialLinks = [
   {
     name: 'GitHub',
-    href: 'https://github.com/pankajkumardev/ui-unify',
+    href: 'https://github.com/rishavchand/ui-unify',
     icon: GithubIcon,
   },
   {
     name: 'Twitter',
-    href: 'https://twitter.com/pankajkumar_dev',
+    href: 'https://twitter.com/RishavChand18',
     icon: TwitterIcon,
   },
 ] as const;
